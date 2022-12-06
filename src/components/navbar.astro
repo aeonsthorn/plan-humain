@@ -1,0 +1,168 @@
+---
+import I from "../../utils/translate";
+import classNames from "../../utils/twClassNames";
+
+const { pathname } = Astro.props;
+const lang = pathname.includes("en") ? "en" : "fr";
+const translatePathName =
+  lang == "en" ? "/" + pathname.split("en/")[1] : "/en" + pathname;
+---
+
+<div
+  class="bg-custom-purple flex pt-6 w-full h-full z-80 sticky pb-5 top-0 duration-700 scrollTigger"
+  id="navbar"
+>
+  <div
+    class="border border-white w-full absolute bottom-0 duration-1000 opacity-0"
+    id="navbar-underline"
+  >
+  </div>
+  <div
+    class="w-full h-screen flex flex-col sm:hidden absolute bg-custom-purple top-16 z-80 -translate-y-[1000px] bg-custom-green-900"
+    id="dropdownMenu"
+  >
+    <div
+      class="text-white flex flex-col space-y-4 font-bold items-center justify-center w-full h-full"
+    >
+      <a href={lang == "en" ? "/en/" : "/"} class="overflow-hidden">
+        <h3
+          class={classNames(
+            pathname == "/" || pathname == "/en/" ? "font-black" : "font-thin",
+            "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
+          )}
+        >
+          {I("Accueil", "fr")}
+        </h3>
+      </a>
+      <a
+        href={lang == "en" ? "/en/" + "services" : "/services"}
+        class="overflow-hidden"
+      >
+        <h3
+          class={classNames(
+            pathname.includes("/services") ? "font-black" : "font-thin",
+            "cursor-pointer m-auto w-fit hover:text-white menuOption -translate-y-[50px] uppercase "
+          )}
+        >
+          Services
+        </h3>
+      </a>
+      <a
+        href={lang == "en" ? "/en/" + "aboutUs" : "/aboutUs"}
+        class="overflow-hidden"
+      >
+        <h3
+          class={classNames(
+            pathname.includes("/aboutUs") ? "font-black" : "font-thin",
+            "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
+          )}
+        >
+          {I("équipe", lang)}
+        </h3>
+      </a>
+      <a
+        href={lang == "en" ? "/en/" + "contact" : "/contact"}
+        class="overflow-hidden"
+      >
+        <h3
+          class={classNames(
+            pathname.includes("/contact") ? "font-black" : "font-thin",
+            "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px]"
+          )}
+        >
+          Contact
+        </h3>
+      </a>
+      <a href={translatePathName} class="overflow-hidden langSelector">
+        <h3
+          class="cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] font-thin"
+        >
+          {lang == "fr" ? "en" : "fr"}
+        </h3>
+      </a>
+    </div>
+  </div>
+  <div
+    class="max-w-[1300px] m-auto w-full flex items-center justify-between relative px-4 sm:px-12 z-100"
+  >
+    <div class="relative overflow-hidden">
+      <picture>
+        <!-- <source srcset="/companyLogo.webp" /> -->
+        <img
+          src="/companyLogoAnimate.png"
+          class="h-full w-1/2 sm:w-fit max-w-[150px] sm:max-w-[200px] relative object-cover z-100"
+          alt="plan humain company logo"
+        />
+      </picture>
+      <div
+        class="loadInLineHeader absolute top-0 h-full w-full overflow-hidden"
+      >
+        <picture>
+          <!-- <source srcset="/companyLogo.webp" /> -->
+          <img
+            src="/companyLogoAnimatedLine.png"
+            class="h-full sm:w-fit min-w-[150px] max-w-[150px] sm:max-w-[200px] object-cover z-100"
+            alt="plan humain company logo"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="text-white hidden sm:flex space-x-4 font-bold w-10/12 text-center"
+    >
+      <a href={lang == "en" ? "/en/" : "/"}>
+        <h6
+          class={classNames(
+            pathname == "/" || pathname == "/en/" ? "font-bold" : "",
+            "cursor-pointer hover:text-white uppercase"
+          )}
+        >
+          {I("Accueil", lang)}
+        </h6>
+      </a>
+      <a href={lang == "en" ? "/en/" + "services" : "/services"}>
+        <h6
+          class={classNames(
+            pathname.includes("/services") ? "font-bold" : "",
+            "cursor-pointer hover:text-white uppercase"
+          )}
+        >
+          {I("Services", lang)}
+        </h6>
+      </a>
+      <a href={lang == "en" ? "/en/" + "aboutUs" : "/aboutUs"}>
+        <h6
+          class={classNames(
+            pathname.includes("/aboutUs") ? "font-bold" : "",
+            "cursor-pointer hover:text-white uppercase"
+          )}
+        >
+          {I("équipe", lang)}
+        </h6>
+      </a>
+      <a href={lang == "en" ? "/en/" + "contact" : "/contact"}>
+        <h6
+          class={classNames(
+            pathname.includes("/contact") ? "font-bold" : "",
+            "cursor-pointer hover:text-white uppercase"
+          )}
+        >
+          {I("Contact", "fr")}
+        </h6>
+      </a>
+      <a href={translatePathName}>
+        <h6 class="cursor-pointer hover:text-white translate-y-[1px] uppercase">
+          {lang == "fr" ? "en" : "fr"}
+        </h6>
+      </a>
+    </div>
+    <button
+      class="text-white sm:hidden flex flex-col space-y-1.5 w-fit cursor-pointer z-[100]"
+      id="hamburgerMenu"
+    >
+      <div class="border-2 w-10 rounded-full bg-white border-white"></div>
+      <div class="border-2 w-10 rounded-full bg-white border-white"></div>
+      <div class="border-2 w-10 rounded-full bg-white border-white"></div>
+    </button>
+  </div>
+</div>

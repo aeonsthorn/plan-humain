@@ -1,0 +1,23 @@
+- add favicon for the tab bar 
+- add a title for each page for the tab bar 
+- add correct links
+- change font sizes for different screens
+- add en folder pass the language as a prop 
+- reoptimize the main image on the home page 
+- change linkedin image on aboutus page transparent background and fill= yellow color like the rest of the text
+- hightlight dropdown nav bar opiton only when current page is selected
+
+- make all linkedin and facebook logos turn white when hovered 
+- translate all the form inputs to english
+- change buttons 
+
+<Component lang='en' />
+
+
+
+---
+const lang = Astro.props
+
+---
+
+<div>{lang}</div>

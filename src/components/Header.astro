@@ -1,0 +1,19 @@
+---
+import Navbar from "./navbar.astro";
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<header class="mb-8">
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    is:inline
+    defer
+  ></script>
+  <script src="../../utils/animation.js"></script>
+  <nav class="bg-custom-green-900">
+    <Navbar pathname={pathname} />
+  </nav>
+</header>

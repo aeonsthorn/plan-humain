@@ -1,0 +1,53 @@
+---
+const lang = new URL(Astro.request.url).pathname.includes("/en") ? "en" : "fr";
+---
+
+<div class="flex items-center justify-between sm:justify-evenly w-full py-20">
+  <a
+    href={lang == "fr" ? "https://h-co.ca/" : "https://h-co.ca/en"}
+    class="h-fit w-20 cursor-pointer"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <picture>
+      <source srcset="/hcoLogo.webp" />
+      <img
+        src="/hcoLogo.png"
+        class="object-cover hover:brightness-0 hover:invert"
+        alt="hco Logo"
+      />
+    </picture>
+  </a>
+  <a
+    href={lang == "fr"
+      ? "https://sismikimpact.com/fr"
+      : "https://sismikimpact.com/en"}
+    class="h-fit w-28 cursor-pointer"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <picture>
+      <source srcset="/sismkLogo.webp" />
+      <img
+        src="/sismkLogo.png"
+        class="object-cover hover:brightness-0 hover:invert"
+        alt="Sismik Logo"
+      />
+    </picture>
+  </a>
+  <a
+    href={lang == "fr" ? "https://halte.dev/" : "https://halte.dev/en"}
+    class="h-fit w-24 cursor-pointer"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <picture>
+      <source srcset="/halteLogo.webp" />
+      <img
+        src="/halteLogo.png"
+        class="object-cover hover:brightness-0 hover:invert"
+        alt="halte logo"
+      />
+    </picture>
+  </a>
+</div>

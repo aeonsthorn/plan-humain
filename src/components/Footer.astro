@@ -1,0 +1,126 @@
+---
+import I from "../../utils/translate";
+const { lang } = Astro.props;
+const today = new Date();
+---
+
+<footer class="bg-custom-green-900 h-full relative pb-7 text-custom-beige-100">
+  <div
+    class="h-full pt-10 max-w-[1300px] m-auto space-y-5 sm:space-y-0 sm:text-left flex pb-4 px-4 sm:px-12"
+  >
+    <div class="w-full xs:w-6/12 sm:w-2/12 hidden sm:flex flex-col">
+      <a href="mailto:info@planhumain.com">
+        <p class="text-sm cursor-pointer hover:text-white duration-200">
+          info@planhumain.com
+        </p>
+      </a>
+      <a href="tel:514-295-7667">
+        <p class="text-sm hover:text-white duration-200">514-295-7667</p>
+      </a>
+    </div>
+    <div class="w-full flex sm:justify-center ml-4 sm:ml-0 relative">
+      <div class="w-fit">
+        <picture class="w-fit">
+          <img
+            src="/smallCompanyLogoAnimate.png"
+            class="max-w-[100px] w-full object-cover mb-4 sm:mb-0"
+            alt="plan humain company logo"
+          />
+        </picture>
+        <div
+          class="top-0 w-[110px] h-full absolute loadInLineFooter overflow-hidden z-0"
+        >
+          <picture>
+            <img
+              src="/smallCompanyLogoAnimateLine.png"
+              class="min-w-[100px] max-w-[100px] object-cover mb-4 sm:mb-0 h-full"
+              alt="plan humain company logo"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="w-2/12 sm:flex hidden justify-end">
+      <a
+        href="https://www.linkedin.com/feed/"
+        target="_blank"
+        rel="noreferrer"
+        class="w-fit h-fit"
+      >
+        <picture>
+          <img
+            src="/linkedin.svg"
+            class="w-8 object-cover hover:brightness-0 hover:invert"
+            alt="linkedin logo"
+          />
+        </picture>
+      </a>
+      <a
+        href="https://www.facebook.com"
+        target="_blank"
+        rel="noreferrer"
+        class="w-fit h-fit"
+      >
+        <picture>
+          <img
+            src="/facebookIcon.svg"
+            class="w-8 object-cover hover:invert hover:brightness-0"
+            alt="facebook logo"
+          />
+        </picture>
+      </a>
+    </div>
+    <div class="w-6/12 flex flex-col sm:hidden justify-between">
+      <div class="w-full xs:w-6/12 sm:w-2/12 sm:hidden flex flex-col">
+        <a href="mailto:info@planhumain.com">
+          <p class="text-sm cursor-pointer hover:text-white">
+            info@planhumain.com
+          </p>
+        </a>
+        <a href="tel:514-295-7667">
+          <p class="text-sm hover:text-white">514-295-7667</p>
+        </a>
+      </div>
+      <div class="flex">
+        <a
+          href="https://www.linkedin.com/feed/"
+          target="_blank"
+          rel="noreferrer"
+          class="w-fit h-fit"
+        >
+          <picture>
+            <img
+              src="/linkedin.svg"
+              class="w-8 object-cover"
+              alt="linkedin logo"
+            />
+          </picture>
+        </a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noreferrer"
+          class="w-fit h-fit"
+        >
+          <picture>
+            <img
+              src="/facebookIcon.svg"
+              class="w-8 object-cover"
+              alt="facebook logo"
+            />
+          </picture>
+        </a>
+      </div>
+    </div>
+  </div>
+  <a href={lang === "fr" ? "https://halte.dev/" : "https://halte.dev/en"}>
+    <div
+      class="text-custom-light-purple text-center hover:text-white pt-6 scrollTiggerFooter"
+    >
+      <p class="text-sm mb-3">
+        &copy; {today.getFullYear()}
+        {I("Produit par Carbonia Web", lang)}
+      </p>
+    </div>
+  </a>
+</footer>
