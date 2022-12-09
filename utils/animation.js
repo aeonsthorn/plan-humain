@@ -25,6 +25,11 @@ const handleDropDownMenu = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
+ScrollTrigger.config({
+  limitCallbacks: true,
+  ignoreMobileResize: true,
+});
+
 gsap.from(".seperatorLine", {
   duration: 2,
   x: "-50vw",
@@ -35,42 +40,19 @@ gsap.from(".seperatorLine", {
   },
 });
 
-gsap.from(".seperatorLineContact", {
-  duration: 3,
-  width: 0,
+gsap.from(".loadInLineFooter", {
+  duration: 1,
+  width: "0",
   ease: "ease-in",
   scrollTrigger: {
-    trigger: ".scrollTiggerContact",
-    start: "top 90%",
+    trigger: ".scrollTiggerFooter",
+    start: "top 80%",
+    end: "bottom bottom",
+    once: true,
+    toggleActions: "restart none none none",
+    onLeaveBack: (self) => self.disable(),
   },
 });
-
-const scrollTriggerFooter = document.querySelector(".scrollTiggerFooter");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        gsap.to(".loadInLineFooter", {
-          duration: 1.5,
-          width: 110,
-          ease: "ease-in",
-          onComplete: () => {
-            observer.unobserve(scrollTriggerFooter);
-            document.querySelector(".loadInLineFooter").style.width = "110px";
-          },
-        });
-      }
-    });
-  },
-  {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5,
-  }
-);
-
-observer.observe(scrollTriggerFooter);
 
 document
   .getElementsByClassName("langSelector")[0]

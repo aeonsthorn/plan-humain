@@ -4,7 +4,9 @@ const { lang } = Astro.props;
 const today = new Date();
 ---
 
-<footer class="bg-custom-green-900 h-full relative pb-7 text-custom-beige-100">
+<footer
+  class="bg-custom-green-900 h-full relative pb-7 text-custom-beige-100 scrollTiggerFooter"
+>
   <div
     class="h-full pt-10 max-w-[1300px] m-auto space-y-5 sm:space-y-0 sm:text-left flex pb-4 px-4 sm:px-12"
   >
@@ -22,18 +24,18 @@ const today = new Date();
       <div class="w-fit">
         <picture class="w-fit">
           <img
-            src="/smallCompanyLogoAnimate.png"
-            class="max-w-[100px] w-full object-cover mb-4 sm:mb-0"
+            src="/smallCompanyLogoAnimate.svg"
+            class="max-w-[150px] w-full object-cover mb-4 sm:mb-0"
             alt="plan humain company logo"
           />
         </picture>
         <div
-          class="top-0 w-0 h-full absolute loadInLineFooter overflow-hidden z-0"
+          class="top-0 w-[150px] h-full absolute loadInLineFooter overflow-hidden z-0"
         >
           <picture>
             <img
-              src="/smallCompanyLogoAnimateLine.png"
-              class="min-w-[100px] max-w-[100px] object-cover mb-4 sm:mb-0 h-full"
+              src="/smallCompanyLogoAnimateLine.svg"
+              class="min-w-[150px] max-w-[150px] object-cover mb-4 sm:mb-0 h-full"
               alt="plan humain company logo"
             />
           </picture>
@@ -114,9 +116,7 @@ const today = new Date();
     </div>
   </div>
   <a href="https://carboniaweb.com">
-    <div
-      class="text-custom-light-purple text-center hover:text-white pt-6 scrollTiggerFooter"
-    >
+    <div class="text-custom-light-purple text-center hover:text-white pt-6">
       <p class="text-sm mb-0 hover:text-white">
         &copy; {today.getFullYear()}
         {I("Produit par Carbonia Web", lang)}
