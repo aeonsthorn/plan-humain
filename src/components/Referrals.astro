@@ -2,10 +2,12 @@
 const lang = new URL(Astro.request.url).pathname.includes("/en") ? "en" : "fr";
 ---
 
-<div class="flex items-center justify-between sm:justify-evenly w-full py-20">
+<div
+  class="flex items-center justify-between sm:justify-evenly w-full py-12 sm:py-20"
+>
   <a
     href={lang == "fr" ? "https://h-co.ca/" : "https://h-co.ca/en"}
-    class="h-fit w-20 cursor-pointer"
+    class="h-fit w-16 sm:w-20 cursor-pointer"
     target="_blank"
     rel="noreferrer"
   >
@@ -37,7 +39,7 @@ const lang = new URL(Astro.request.url).pathname.includes("/en") ? "en" : "fr";
   </a>
   <a
     href={lang == "fr" ? "https://halte.dev/" : "https://halte.dev/en"}
-    class="h-fit w-24 cursor-pointer"
+    class="h-fit w-20 sm:w-24 cursor-pointer"
     target="_blank"
     rel="noreferrer"
   >

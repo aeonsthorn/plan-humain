@@ -1,0 +1,26 @@
+---
+const { text, link } = Astro.props;
+import I from "../../utils/translate.js";
+---
+
+<a href={link} class="svg-btn z-0 relative w-auto">
+  <svg
+    viewBox="0 0 146 50"
+    class="absolute top-0 left-0"
+    style="height:130%"
+    preserveAspectRatio="none"
+  >
+    <line x1="0" x2="146" y1="0" y2="0"></line>
+    <line x1="146" x2="146" y1="0" y2="50"></line>
+    <line x1="0" x2="146" y1="38" y2="38"></line>
+    <line x1="0" x2="0" y1="0" y2="38"></line>
+
+    <line class="anim-top" x1="0" x2="146" y1="0" y2="0"></line>
+    <line class="anim-right" x1="146" x2="146" y1="0" y2="38"></line>
+    <line class="anim-bottom" x1="0" x2="146" y1="38" y2="38"></line>
+    <line class="anim-left" x1="0" x2="0" y1="0" y2="38"></line>
+  </svg>
+  <p class="w-full" style="color:#e3ddbd;">
+    {I(text, "fr")}
+  </p>
+</a>

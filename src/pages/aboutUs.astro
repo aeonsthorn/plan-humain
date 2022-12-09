@@ -10,17 +10,20 @@ const lang = "fr";
 
 <!DOCTYPE html>
 <html lang={lang}>
-  <BaseHead title="Équipe" description={SITE_DESCRIPTION} />
+  <BaseHead
+    title="Notre équipe | Plan humain"
+    description="Fannie Perron, Pierre Leroux et tous nos collaborateur.trice.s se distinguent par leur compréhension de la réalité des milieux corporatif et OBNL."
+  />
 
   <body>
     <Header />
     <main class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12">
       <div class="px-4 sm:px-10 md:px-20 pb-10">
-        <h1 class="py-10">
-          {I("UNE PERSPECTIV", lang)}E<br />
-          {I("QUI FAIT DU BIEN", lang)}
+        <h1 class="pt-0 pb-10 sm:py-10">
+          {I("Une perspective", lang)}<br />
+          {I("qui fait du bien", lang)}
         </h1>
-        <p class="pb-20">
+        <p class="pb-12 sm:pb-20">
           {
             I(
               "Plan humain, c’est une équipe dont les membres se distinguent grâce à leur compréhension plutôt unique de la réalité du terrain – celle du secteur corporatif tout comme celui des OBNL. Une expérience acquise sur plus de 20 ans, partout à travers le Québec, au fil de mandats de services-conseils, d’accompagnement en réflexion stratégique, de gestion de programmes de dons et commandites. Notre plus grande fierté? Celle d’exercer un impact positif sur des dizaines d’organisations, tant au niveau stratégique que financier.",
@@ -31,7 +34,7 @@ const lang = "fr";
         <h3>{I("NOS CO-FONDATEUR.TRICE.S", lang)}</h3>
       </div>
       <div class="flex md:flex-row flex-col">
-        <div class="max-h-[400px] md:max-h-full md:w-5/12">
+        <div class="max-h-[400px] md:max-h-full md:w-5/12 shadow-md">
           <picture>
             <source
               srcset="/FannieProfilePictureSmall.webp"
@@ -51,16 +54,16 @@ const lang = "fr";
             />
           </picture>
         </div>
-        <div class="bg-custom-green-900 md:w-7/12 p-5 sm:p-[60px]">
-          <div class="py-5">
-            <h3 class="h-9 mb-3">Fannie Perron</h3>
-            <h5>{I("Co-fondatrice", lang)}</h5>
+        <div class="bg-custom-green-900 md:w-7/12 p-5 sm:p-[60px] md:p-[40px]">
+          <div class="pt-0 sm-py-5">
+            <h3 class="mb-3">Fannie Perron</h3>
+            <h5 class="mb-2">{I("Co-fondatrice", lang)}</h5>
           </div>
           <a href="mailto:fannie@planhumain.com" class="hover:text-white">
-            <p>fannie@planhumain.com</p>
+            <p class="text-sm hover:text-white">fannie@planhumain.com</p>
           </a>
           <a href="tel:514-742-8463">
-            <p class="hover:text-white">514-742-8463</p>
+            <p class="hover:text-white text-sm">514-742-8463</p>
           </a>
           <div class="w-6 h-6">
             <a
@@ -85,14 +88,29 @@ const lang = "fr";
               )
             }
           </p>
-          <p>{I("Implication bénévole actuell", lang)}e</p>
-          <h6>{I("Fondation du Collège Notre-Dame (2020+)", lang)}</h6>
-          <h6>{I("Le projet Harmonie (2021+)", lang)}</h6>
-          <h6>{I("L’Étoile de Pacho (2022+)", lang)}</h6>
+          <p class="font-semibold">
+            {I("Implication bénévole actuell", lang)}e
+          </p>
+          <a
+            href="https://www.collegenotredame.com/la-fondation"
+            class="text-sm hover:text-white"
+          >
+            {I("Fondation du Collège Notre-Dame (2020+)", lang)}
+          </a>
+          <br />
+          <a href="https://projetharmonie.ca" class="text-sm hover:text-white"
+            >{I("Le projet Harmonie (2021+)", lang)}</a
+          >
+          <br />
+          <a
+            href="https://www.etoiledepacho.ca"
+            class="text-sm hover:text-white"
+            >{I("L’Étoile de Pacho (2022+)", lang)}</a
+          >
         </div>
       </div>
-      <div class="pt-10 pb-20 flex md:flex-row flex-col h-full">
-        <div class="max-h-[400px] md:max-h-full md:w-5/12">
+      <div class="pt-10 pb-12 sm:pb-20 flex md:flex-row flex-col h-full">
+        <div class="max-h-[400px] md:max-h-full md:w-5/12 shadow-md">
           <picture>
             <source srcset="/PierreSmallImage.png" media="(max-width: 650px)" />
             <img
@@ -103,14 +121,14 @@ const lang = "fr";
           </picture>
         </div>
         <div class="bg-custom-green-900 md:w-7/12 p-5 sm:p-[60px]">
-          <h3 class="h-9 mb-3">Pierre Leroux</h3>
-          <h5>{I("Co-fondateur", lang)}</h5>
-          <div class="py-5">
+          <h3 class="mb-3">Pierre Leroux</h3>
+          <h5 class="mb-2">{I("Co-fondateur", lang)}</h5>
+          <div class="pt-0 sm-py-5">
             <a href="mailto:pierre@planhumain.com">
-              <p class="hover:text-white">pierre@planhumain.com</p>
+              <p class="hover:text-white text-sm">pierre@planhumain.com</p>
             </a>
             <a href="tel:514-589-5733" class="hover:text-white">
-              <p>514-589-5733</p>
+              <p class="text-sm hover:text-white">514-589-5733</p>
             </a>
             <div class="w-6 h-6">
               <a
@@ -136,12 +154,19 @@ const lang = "fr";
               )
             }
           </p>
-          <p>{I("Implication bénévole actuelle", lang)}</p>
-          <h6>{I("2e tête (2021+)", lang)}</h6>
-          <h6>{I("Entrepren’arts (2019+)", lang)}</h6>
+          <p class="font-semibold">
+            {I("Implication bénévole actuelle", lang)}
+          </p>
+          <a href="https://2etete.com" class="text-sm hover:text-white"
+            >{I("2e tête (2021+)", lang)}</a
+          >
+          <br />
+          <a href="https://entreprenarts.org" class="text-sm hover:text-white"
+            >{I("Entrepren’arts (2019+)", lang)}</a
+          >
         </div>
       </div>
-      <div class="px-4 sm:px-10 md:px-20 pb-10">
+      <div class="px-4 sm:px-10 md:px-20 pb-6 sm:pb-10">
         <h3 class="pb-10">{I("DES PARTENAIRES D’IMPACTS", lang)}</h3>
         <p>
           {

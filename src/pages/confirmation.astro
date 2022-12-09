@@ -4,26 +4,30 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import I from "../../utils/translate";
+import Button from "../components/Button.astro";
 const lang = "fr";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title="Contact" description={SITE_DESCRIPTION} />
+    <BaseHead
+      title="Bien reçu, merci."
+      description="Eh oui, on s’appelle « Plan humain » et cette confirmation d’envoi vous est transmise par un robot. N’ayez crainte, un membre de notre équipe, en chair et en os, communiquera avec vous dans les meilleurs délais."
+    />
   </head>
   <body>
     <Header title={SITE_TITLE} />
     <main
       class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-10 min-h-screen"
     >
-      <div class="h-full">
+      <div class="h-full shadow-md">
         <div class="relative w-full h-full max-h-[1200px]">
           <div
             class="absolute bg-gradient-to-r from-custom-green-900 to-transparent w-full h-full z-40 opacity-40"
           >
           </div>
-          <div class="min-h-[220px] sm:min-h-[350px] md:min-h-[450px]">
+          <div class="min-h-[220px] sm:h-[350px] md:h-[450px] lg:h-[650px]">
             <picture>
               <source
                 srcset="/contactUsSmallImage.webp"
@@ -36,14 +40,19 @@ const lang = "fr";
                 type="image/png"
               />
               <source srcset="/contactUsImage.webp" type="image/webp" />
-              <img src="/contactUsImage.png" class="z-30" alt="" />
+              <img
+                src="/contactUsImage.png"
+                class="z-30 h-full object-cover"
+                alt=""
+              />
             </picture>
           </div>
           <div
             class="absolute top-[50%] -translate-y-[50%] left-[8%] z-50 w-fit"
           >
             <h1>
-              {I("Confirmation", lang)}
+              {I("Merci,", lang)}<br />
+              {I("bien reçu", lang)}
             </h1>
           </div>
         </div>
@@ -52,11 +61,14 @@ const lang = "fr";
         <p class="leading-relaxed">
           {
             I(
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.",
+              "Eh oui, on s’appelle « Plan humain » et cette confirmation d’envoi vous est transmise par un robot. N’ayez crainte, un membre de notre équipe, en chair et en os, communiquera avec vous dans les meilleurs délais.",
               lang
             )
           }
         </p>
+        <div class="flex justify-center mt-12">
+          <Button text="Retourner à l'accueil" link="/" />
+        </div>
       </div>
     </main>
     <Footer />
