@@ -1,6 +1,5 @@
 ---
 const { text, link } = Astro.props;
-import I from "../../utils/translate.js";
 ---
 
 <a href={link} class="svg-btn z-0 relative w-auto">
@@ -21,6 +20,6 @@ import I from "../../utils/translate.js";
     <line class="anim-left" x1="0" x2="0" y1="0" y2="38"></line>
   </svg>
   <p class="w-full" style="color:#e3ddbd;">
-    {I(text, "fr")}
+    {text}
   </p>
 </a>

@@ -19,7 +19,7 @@ const translations = {
     fr: "Accueil",
     en: "Home",
   },
-  services: { fr: "services", en: "What We Do" },
+  services: { fr: "services", en: "services" },
   équipe: { fr: "équipe", en: "Our Team" },
   contact: { fr: "contact", en: "Contact Us" },
 
@@ -195,10 +195,10 @@ const translations = {
     },
   //Page
   Commencer: { fr: "Commencer", en: "Getting started" },
-  "quelque part": { fr: "quelque part", en: "is easy if" },
+  "quelque part": { fr: "quelque part", en: "is easy if you" },
   "c'est plus facile ici.": {
     fr: "c'est plus facile ici.",
-    en: "if you start right here. ",
+    en: "start right here. ",
   },
   "Partout à travers le Québec, nous aidons les entreprises à atteindre leurs objectifs d’engagement social en imaginant, en déployant, puis en bonifiant avec leurs leaders un plan véritablement humain.":
     {
@@ -256,6 +256,13 @@ const translations = {
   "/confirmation/": {
     fr: "/confirmation/",
     en: "/en/confirmation/",
+  },
+
+  //Footer
+
+  "Produit par Carbonia Web": {
+    fr: "Produit par Carbonia Web",
+    en: "Developed by Carbonia Web",
   },
 };
 

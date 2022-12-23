@@ -1,5 +1,5 @@
 ---
-import I from "../../utils/translate";
+import i from "../../utils/i18";
 const { lang } = Astro.props;
 const today = new Date();
 ---
@@ -119,7 +119,7 @@ const today = new Date();
     <div class="text-custom-light-purple text-center hover:text-white pt-6">
       <p class="text-sm mb-0 hover:text-white">
         &copy; {today.getFullYear()}
-        {I("Produit par Carbonia Web", lang)}
+        {i("Produit par Carbonia Web", lang)}
       </p>
     </div>
   </a>
