@@ -1,5 +1,5 @@
 ---
-import I from "../../utils/translate";
+import i from "../../utils/i18";
 import classNames from "../../utils/twClassNames";
 
 const { pathname } = Astro.props;
@@ -31,7 +31,7 @@ const translatePathName =
             "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
           )}
         >
-          {I("Accueil", "fr")}
+          {i("Accueil", "fr")}
         </p>
       </a>
       <a
@@ -57,7 +57,7 @@ const translatePathName =
             "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
           )}
         >
-          {I("équipe", lang)}
+          {i("équipe", lang)}
         </p>
       </a>
       <a
@@ -86,7 +86,7 @@ const translatePathName =
     class="max-w-[1300px] m-auto w-full flex items-center justify-between relative px-4 sm:px-12 z-100"
   >
     <div class="relative overflow-hidden">
-      <a href="/">
+      <a href={i("/", lang)}>
         <picture>
           <img
             src="/companyLogoAnimate.png"
@@ -115,7 +115,7 @@ const translatePathName =
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
-          {I("Accueil", lang)}
+          {i("Accueil", lang)}
         </p>
       </a>
       <a href={lang == "en" ? "/en/" + "services" : "/services"}>
@@ -125,7 +125,7 @@ const translatePathName =
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
-          {I("Services", lang)}
+          {i("services", lang)}
         </p>
       </a>
       <a href={lang == "en" ? "/en/" + "aboutUs" : "/aboutUs"}>
@@ -135,7 +135,7 @@ const translatePathName =
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
-          {I("équipe", lang)}
+          {i("équipe", lang)}
         </p>
       </a>
       <a href={lang == "en" ? "/en/" + "contact" : "/contact"}>
@@ -145,7 +145,7 @@ const translatePathName =
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
-          {I("Contact", "fr")}
+          {i("contact", "fr")}
         </p>
       </a>
       <a href={lang == "en" ? "/" : "/en/"}>

@@ -128,17 +128,10 @@ const { lang } = Astro.props;
         </div>
       </div>
       <div id="submitForm" class="flex justify-center pt-10 w-full">
-        <Button text={i("Envoyer maintenant", lang)} link="/confirmation" />
-
-        <script is:inline>
-          function handleClick(e) {
-            e.preventDefault();
-            window.location.href = "/confirmation";
-          }
-          document
-            .getElementById("submitForm")
-            .addEventListener("click", handleClick);
-        </script>
+        <Button
+          text={i("Envoyer maintenant", lang)}
+          link={i("/confirmation/", lang)}
+        />
       </div>
     </form>
   </main>

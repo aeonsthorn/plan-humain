@@ -228,6 +228,31 @@ const translations = {
   "Merci,": { fr: "Merci,", en: "Got it," },
   "bien reçu": { fr: "bien reçu", en: "Thanks." },
   "Retourner à l'accueil": { fr: "Retourner à l'accueil", en: "Go back home" },
+
+  // links
+
+  "/": {
+    fr: "/",
+    en: "/en/",
+  },
+
+  "/services/": {
+    fr: "/services/",
+    en: "/en/services/",
+  },
+
+  "/aboutUs/": {
+    fr: "/aboutUs/",
+    en: "/en/aboutUs/",
+  },
+  "/contact/": {
+    fr: "/contact/",
+    en: "/en/contact/",
+  },
+  "/confirmation/": {
+    fr: "/confirmation/",
+    en: "/en/confirmation/",
+  },
 };
 
 export default function i(
