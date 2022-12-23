@@ -1,5 +1,5 @@
 ---
-import I from "../../utils/translate";
+import i from "../../utils/i18";
 import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
 const { lang } = Astro.props;
@@ -63,10 +63,10 @@ const { lang } = Astro.props;
       <p class="leading-relaxed py-6 sm:py-10">
         {
           i(
-            "Et si on prenait d’abord un café? Pour discuter de vos aspirations et priorités, contactez Fannie Perron à ",
+            "Et si on prenait d’abord un café? Pour discuter de vos aspirations et priorités, contactez Fannie Perron à",
             lang
           )
-        }<a
+        }{" "}<a
           href="mailto:fannie@planhumain.com"
           class="hover:text-white duration-250">fannie@planhumain.com</a
         >
@@ -128,7 +128,7 @@ const { lang } = Astro.props;
         </div>
       </div>
       <div id="submitForm" class="flex justify-center pt-10 w-full">
-        <Button text="Envoyer maintenant" link="/confirmation" />
+        <Button text={i("Envoyer maintenant", lang)} link="/confirmation" />
 
         <script is:inline>
           function handleClick(e) {

@@ -54,9 +54,12 @@ const { lang } = Astro.props;
     >
       <div class="px-4 sm:px-0 flex flex-col md:flex-row">
         <div class="md:w-5/12">
-          <h3>{i("LE MEILLEUR PLAN", lang)}<br />{i("EST HUMAIN")}</h3>
+          <h3>{i("LE MEILLEUR PLAN", lang)}<br />{i("EST HUMAIN", lang)}</h3>
           <div class="mt-5 hidden sm:flex">
-            <Button text="Parlez-nous de votre projet" link="/contact" />
+            <Button
+              text={i("Parlez-nous de votre projet", lang)}
+              link="/contact"
+            />
           </div>
         </div>
         <div class="md:w-7/12">
@@ -71,7 +74,10 @@ const { lang } = Astro.props;
         </div>
         <div class="block sm:hidden">
           <div class="mt-5 flex">
-            <Button text="Parlez-nous de votre projet" link="/contact" />
+            <Button
+              text={i("Parlez-nous de votre projet", lang)}
+              link="/contact"
+            />
           </div>
         </div>
       </div>

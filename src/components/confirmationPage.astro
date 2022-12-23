@@ -1,5 +1,5 @@
 ---
-import I from "../../utils/translate";
+import i from "../../utils/i18";
 import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
 const { lang } = Astro.props;
@@ -46,14 +46,14 @@ const { lang } = Astro.props;
     <div class="px-4 sm:px-12 md:px-20 py-10 md:py-20">
       <p class="leading-relaxed">
         {
-          I(
+          i(
             "Eh oui, on s’appelle « Plan humain » et cette confirmation d’envoi vous est transmise par un robot. N’ayez crainte, un membre de notre équipe, en chair et en os, communiquera avec vous dans les meilleurs délais.",
             lang
           )
         }
       </p>
       <div class="flex justify-center mt-12">
-        <Button text="Retourner à l'accueil" link="/" />
+        <Button text={i("Retourner à l'accueil", lang)} link="/" />
       </div>
     </div>
   </main>
