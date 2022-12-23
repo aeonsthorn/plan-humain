@@ -122,6 +122,10 @@ const translations = {
     },
 
   //Page
+  "Nos clients": {
+    fr: "Nos clients",
+    en: "Our clients",
+  },
   "Une perspective": { fr: "Une perspective", en: "A positive" },
   "qui fait du bien": { fr: "qui fait du bien", en: "perspective" },
   "Plan humain, c’est une équipe dont les membres se distinguent grâce à leur compréhension plutôt unique de la réalité du terrain – celle du secteur corporatif tout comme celui des OBNL. Une expérience acquise sur plus de 20 ans, partout à travers le Québec, au fil de mandats de services-conseils, d’accompagnement en réflexion stratégique, de gestion de programmes de dons et commandites. Notre plus grande fierté? Celle d’exercer un impact positif sur des dizaines d’organisations, tant au niveau stratégique que financier.":

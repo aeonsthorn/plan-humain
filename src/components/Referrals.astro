@@ -1,5 +1,5 @@
 ---
-const lang = new URL(Astro.request.url).pathname.includes("/en") ? "en" : "fr";
+const { lang } = Astro.props;
 ---
 
 <div
