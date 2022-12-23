@@ -1,14 +1,13 @@
 ---
 import Button from "../components/Button.astro";
 import PrincipalServices from "../components/principalServices.astro";
-import I from "../../utils/translate";
 import i from "../../utils/i18";
 import Layout from "../layouts/Layout.astro";
 
-const { lang } = Astro.props;
+const { lang, path } = Astro.props;
 ---
 
-<Layout lang={lang}>
+<Layout lang={lang} path={path}>
   <main
     class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-0 sm:pt-10"
   >
@@ -42,7 +41,7 @@ const { lang } = Astro.props;
     <div class="px-4 sm:px-12 md:px-20 py-12 sm:py-20">
       <p class="leading-relaxed">
         {
-          I(
+          i(
             "Nous ne sommes pas des consultants dont l’intimidant plan stratégique fait en sorte qu’on ne sait plus par où commencer. L’accompagnement que propose Plan humain vise à garder les choses simples, à se donner suffisamment de recul, à définir des objectifs clairs et des étapes clés – parfois aussi à se challenger. Nous tirons notre satisfaction tant de votre persévérance que de vos avancées.",
             lang
           )

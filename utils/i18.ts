@@ -240,6 +240,11 @@ const translations = {
     en: "/en/",
   },
 
+  "/en/": {
+    fr: "/",
+    en: "/en/",
+  },
+
   "/services/": {
     fr: "/services/",
     en: "/en/services/",
@@ -263,6 +268,18 @@ const translations = {
   "Produit par Carbonia Web": {
     fr: "Produit par Carbonia Web",
     en: "Developed by Carbonia Web",
+  },
+
+  // Partners
+
+  "https://h-co.ca/": {
+    fr: "https://h-co.ca/",
+    en: "https://h-co.ca/en/",
+  },
+
+  "https://sismikimpact.com/fr": {
+    fr: "https://sismikimpact.com/fr",
+    en: "https://sismikimpact.com/en",
   },
 };
 

@@ -2,10 +2,10 @@
 import i from "../../utils/i18";
 import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
-const { lang } = Astro.props;
+const { lang, path } = Astro.props;
 ---
 
-<Layout lang={lang}>
+<Layout lang={lang} path={path}>
   <main
     class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-10 min-h-screen"
   >

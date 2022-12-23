@@ -1,6 +1,9 @@
 ---
 import Navbar from "./navbar.astro";
-const pathname = new URL(Astro.request.url).pathname;
+
+const { lang, path } = Astro.props;
+
+console.log(path);
 ---
 
 <header class="mb-8">
@@ -14,6 +17,6 @@ const pathname = new URL(Astro.request.url).pathname;
   ></script>
   <script src="../../utils/animation.js"></script>
   <nav class="bg-custom-green-900">
-    <Navbar pathname={pathname} />
+    <Navbar currentPath={path} lang={lang} />
   </nav>
 </header>

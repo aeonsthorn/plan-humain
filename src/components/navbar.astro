@@ -2,10 +2,9 @@
 import i from "../../utils/i18";
 import classNames from "../../utils/twClassNames";
 
-const { pathname } = Astro.props;
-const lang = pathname.includes("en") ? "en" : "fr";
-const translatePathName =
-  lang == "en" ? "/" + pathname.split("en/")[1] : "/en" + pathname;
+const { currentPath, lang } = Astro.props;
+
+console.log({ currentPath });
 ---
 
 <div
@@ -27,7 +26,7 @@ const translatePathName =
       <a href={lang == "en" ? "/en/" : "/"} class="overflow-hidden">
         <p
           class={classNames(
-            pathname == "/" || pathname == "/en/" ? "font-black" : "font-thin",
+            currentPath === "/" ? "font-black" : "font-thin",
             "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
           )}
         >
@@ -40,7 +39,7 @@ const translatePathName =
       >
         <p
           class={classNames(
-            pathname.includes("/services") ? "font-black" : "font-thin",
+            currentPath === "/services/" ? "font-black" : "font-thin",
             "cursor-pointer m-auto w-fit hover:text-white menuOption -translate-y-[50px] uppercase "
           )}
         >
@@ -53,7 +52,7 @@ const translatePathName =
       >
         <p
           class={classNames(
-            pathname.includes("/aboutUs") ? "font-black" : "font-thin",
+            currentPath === "/aboutUs/" ? "font-black" : "font-thin",
             "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
           )}
         >
@@ -66,14 +65,14 @@ const translatePathName =
       >
         <p
           class={classNames(
-            pathname.includes("/contact") ? "font-black" : "font-thin",
+            currentPath === "/contact/" ? "font-black" : "font-thin",
             "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px]"
           )}
         >
           Contact
         </p>
       </a>
-      <a href={translatePathName} class="overflow-hidden langSelector">
+      <a href={i("/en/", lang)} class="overflow-hidden langSelector">
         <p
           class="cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] font-thin"
         >
@@ -111,7 +110,7 @@ const translatePathName =
       <a href={lang == "en" ? "/en/" : "/"}>
         <p
           class={classNames(
-            pathname == "/" || pathname == "/en/" ? "font-bold" : "",
+            currentPath === "/" ? "font-bold" : "",
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
@@ -121,7 +120,7 @@ const translatePathName =
       <a href={lang == "en" ? "/en/" + "services" : "/services"}>
         <p
           class={classNames(
-            pathname.includes("/services") ? "font-bold" : "",
+            currentPath === "/services/" ? "font-bold " : "",
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
@@ -131,7 +130,7 @@ const translatePathName =
       <a href={lang == "en" ? "/en/" + "aboutUs" : "/aboutUs"}>
         <p
           class={classNames(
-            pathname.includes("/aboutUs") ? "font-bold" : "",
+            currentPath === "/aboutUs/" ? "font-bold" : "",
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
@@ -141,7 +140,7 @@ const translatePathName =
       <a href={lang == "en" ? "/en/" + "contact" : "/contact"}>
         <p
           class={classNames(
-            pathname.includes("/contact") ? "font-bold" : "",
+            currentPath === "/contact/" ? "font-bold" : "",
             "cursor-pointer hover:text-white uppercase h6"
           )}
         >
