@@ -105,6 +105,16 @@ export default function I(translationtext, lang) {
     Téléphone: { fr: "Téléphone", en: "Phone" },
     Message: { fr: "Message", en: "Message" },
     "Envoyer maintenant": { fr: "Envoyer maintenant", en: "Send" },
+
+
+    //Merci
+    //Meta
+    "Bien reçu, merci.": { fr: "Bien reçu, merci.", en: "Got it! Thanks." },
+    "Eh oui, on s’appelle « Plan humain » et cette confirmation d’envoi vous est transmise par un robot. N’ayez crainte, un membre de notre équipe, en chair et en os, communiquera avec vous dans les meilleurs délais.": { fr: "Eh oui, on s’appelle « Plan humain » et cette confirmation d’envoi vous est transmise par un robot. N’ayez crainte, un membre de notre équipe, en chair et en os, communiquera avec vous dans les meilleurs délais.", en: "This message may be automated, but at Plan Humain, we specialize in CSR with the human touch. A human member of our team will get back to you as soon as possible." },
+    //Page
+    "Merci,": { fr: "Merci,", en: "Got it," },
+    "bien reçu": { fr: "bien reçu", en: "Thanks." },
+    "Retourner à l'accueil": { fr: "Retourner à l'accueil", en: "Go back home" },
   };
 
   const text = translations[translationtext]
