@@ -40,10 +40,13 @@ gsap.from(".seperatorLine", {
   },
 });
 
-gsap.from(".loadInLineFooter", {
+const footerAnimation = gsap.from(".loadInLineFooter", {
   duration: 1,
   width: "0",
   ease: "ease-in",
+  onStart: () => {
+    console.log("starting the animation");
+  },
   scrollTrigger: {
     trigger: ".scrollTiggerFooter",
     start: "top 80%",
@@ -53,6 +56,13 @@ gsap.from(".loadInLineFooter", {
     onLeaveBack: (self) => self.disable(),
   },
 });
+
+if (
+  window.innerHeight > 1200 &&
+  document.querySelector('[data-page-name="home"]')
+) {
+  footerAnimation.resume();
+}
 
 document
   .getElementsByClassName("langSelector")[0]

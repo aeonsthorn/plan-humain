@@ -1,0 +1,60 @@
+---
+import I from "../../utils/translate";
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+const { lang } = Astro.props;
+---
+
+<Layout>
+  <main
+    class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-10 min-h-screen"
+  >
+    <div class="h-full shadow-md">
+      <div class="relative w-full h-full max-h-[1200px]">
+        <div
+          class="absolute bg-gradient-to-r from-custom-green-900 to-transparent w-full h-full z-40 opacity-40"
+        >
+        </div>
+        <div class="min-h-[220px] sm:h-[350px] md:h-[450px] lg:h-[650px]">
+          <picture>
+            <source
+              srcset="/contactUsSmallImage.webp"
+              media="(max-width: 650px)"
+              type="image/webp"
+            />
+            <source
+              srcset="contactUsSmallImage.png"
+              media="(max-width: 650px)"
+              type="image/png"
+            />
+            <source srcset="/contactUsImage.webp" type="image/webp" />
+            <img
+              src="/contactUsImage.png"
+              class="z-30 h-full object-cover"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="absolute top-[50%] -translate-y-[50%] left-[8%] z-50 w-fit">
+          <h1>
+            {i("Merci,", lang)}<br />
+            {i("bien reçu", lang)}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 sm:px-12 md:px-20 py-10 md:py-20">
+      <p class="leading-relaxed">
+        {
+          I(
+            "Eh oui, on s’appelle « Plan humain » et cette confirmation d’envoi vous est transmise par un robot. N’ayez crainte, un membre de notre équipe, en chair et en os, communiquera avec vous dans les meilleurs délais.",
+            lang
+          )
+        }
+      </p>
+      <div class="flex justify-center mt-12">
+        <Button text="Retourner à l'accueil" link="/" />
+      </div>
+    </div>
+  </main>
+</Layout>

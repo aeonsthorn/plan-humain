@@ -1,0 +1,81 @@
+---
+import Button from "../components/Button.astro";
+import PrincipalServices from "../components/principalServices.astro";
+import I from "../../utils/translate";
+import i from "../../utils/i18";
+import Layout from "../layouts/Layout.astro";
+
+const { lang } = Astro.props;
+---
+
+<Layout>
+  <main
+    class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-0 sm:pt-10"
+  >
+    <div>
+      <div class="relative w-full shadow-md">
+        <div
+          class="absolute bg-gradient-to-l from-custom-green-900 to-transparent w-full h-full z-40 opacity-60"
+        >
+        </div>
+        <div class="sm:h-[350px] md:h-[450px] lg:h-[650px]">
+          <picture>
+            <img
+              src="/servicesHeroImage.jpg"
+              class="z-0 h-full object-cover"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div
+          class="absolute top-[50%] -translate-y-[50%] right-[1.6%] sm:right-[8%] z-50 w-fit text-right"
+        >
+          <h1>
+            {i("Imaginer", lang)},<br />
+            {i("générer", lang)}<br />
+            {i("et mesurer", lang)}<br />
+            {i("l'impact social", lang)}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 sm:px-12 md:px-20 py-12 sm:py-20">
+      <p class="leading-relaxed">
+        {
+          I(
+            "Nous ne sommes pas des consultants dont l’intimidant plan stratégique fait en sorte qu’on ne sait plus par où commencer. L’accompagnement que propose Plan humain vise à garder les choses simples, à se donner suffisamment de recul, à définir des objectifs clairs et des étapes clés – parfois aussi à se challenger. Nous tirons notre satisfaction tant de votre persévérance que de vos avancées.",
+            lang
+          )
+        }
+      </p>
+    </div>
+    <div
+      class="w-full bg-custom-green-900 px-0 sm:px-12 md:px-20 py-12 sm:py-20"
+    >
+      <div class="px-4 sm:px-0 flex flex-col md:flex-row">
+        <div class="md:w-5/12">
+          <h3>{i("LE MEILLEUR PLAN", lang)}<br />{i("EST HUMAIN")}</h3>
+          <div class="mt-5 hidden sm:flex">
+            <Button text="Parlez-nous de votre projet" link="/contact" />
+          </div>
+        </div>
+        <div class="md:w-7/12">
+          <p class="pt-5 md:pt-0 md:pl-8">
+            {
+              i(
+                "Au-delà de l’impact sur le plan communautaire, notre équipe expérimentée veille aussi à ce que l’engagement social entraine des retombées positives sur le plan de l’attraction et de la rétention de talents, sur le plan de l’image et de la réputation, tout comme sur le plan de la performance financière.",
+                lang
+              )
+            }
+          </p>
+        </div>
+        <div class="block sm:hidden">
+          <div class="mt-5 flex">
+            <Button text="Parlez-nous de votre projet" link="/contact" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <PrincipalServices lang={lang} />
+  </main>
+</Layout>

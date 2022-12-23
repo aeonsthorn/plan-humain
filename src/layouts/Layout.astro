@@ -1,0 +1,30 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { lang } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <style>
+      @media (max-width: 649px) {
+        h1 {
+          font-size: 25px !important;
+          line-height: 30px !important;
+        }
+      }
+    </style>
+    <BaseHead
+      title="Plan humain : de l'engagement à l’impact"
+      description="Nous aidons les entreprises à s'engager en RSE avec une approche sur mesure, graduelle et viable qui crée de la valeur à chaque point de contact."
+    />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer lang={lang} />
+  </body>
+</html>
