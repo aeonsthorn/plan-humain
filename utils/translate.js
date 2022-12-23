@@ -11,7 +11,7 @@ export default function I(translationtext, lang) {
       fr: "Accueil",
       en: "Home",
     },
-    services: { fr: "services", en: "What We Do" },
+    services: { fr: "services", en: "services" },
     équipe: { fr: "équipe", en: "Our Team" },
     contact: { fr: "contact", en: "Contact Us" },
     
@@ -92,8 +92,8 @@ export default function I(translationtext, lang) {
     "Partout à travers le Québec, nous aidons les entreprises  à atteindre leurs objectifs d’engagement social. Discutons de vos aspirations et priorités.": { fr: "Partout à travers le Québec, nous aidons les entreprises  à atteindre leurs objectifs d’engagement social. Discutons de vos aspirations et priorités.", en: "We help companies across Quebec reach their CSR objectives. Tell us about the impact you’ve always wanted to make." },
       //Page
       Commencer: { fr: "Commencer", en: "Getting started" },
-    "quelque part": { fr: "quelque part", en: "is easy if" },
-    "c'est plus facile ici.": { fr: "c'est plus facile ici.", en: "if you start right here. " },
+    "quelque part": { fr: "quelque part", en: "is easy if you" },
+    "c'est plus facile ici.": { fr: "c'est plus facile ici.", en: "start right here. " },
     "Partout à travers le Québec, nous aidons les organisations à atteindre leurs objectifs d’engagement social en imaginant, en déployant, puis en bonifiant avec leurs leaders un plan véritablement humain.": { fr: "Partout à travers le Québec, nous aidons les organisations à atteindre leurs objectifs d’engagement social en imaginant, en déployant, puis en bonifiant avec leurs leaders un plan véritablement humain.", en: "We help organizations across Quebec craft, implement, and improve tailored plans to reach their social responsibility goals." },
     "Et si on prenait d’abord un café? Pour discuter de vos aspirations et priorités, contactez Fannie Perron à": { fr: "Et si on prenait d’abord un café? Pour discuter de vos aspirations et priorités, contactez Fannie Perron à", en: "Let’s discuss yours over coffee. Tell us about the impact you’ve always wanted to make. Contact Fannie Perron to set up a meeting at " },
     ou: { fr: "ou", en: "or" },
@@ -115,6 +115,11 @@ export default function I(translationtext, lang) {
     "Merci,": { fr: "Merci,", en: "Got it," },
     "bien reçu": { fr: "bien reçu", en: "Thanks." },
     "Retourner à l'accueil": { fr: "Retourner à l'accueil", en: "Go back home" },
+
+
+    //Footer
+    
+    "Produit par Carbonia Web": { fr: "Produit par Carbonia Web", en: "Developed by Carbonia Web" },
   };
 
   const text = translations[translationtext]
