@@ -31,8 +31,8 @@ export default function I(translationtext, lang) {
 
       //Page
     "Imaginer": { fr: "Imaginer", en: "Define" },
-    "générer": { fr: "générer", en: "drive" },
-    "et mesurer": { fr: "et mesurer", en: "and measure" },
+    "générer": { fr: "générer", en: "drive and" },
+    "et mesurer": { fr: "et mesurer", en: "measure" },
     "l'impact social": { fr: "l'impact social", en: "your impact" },
     "Nous ne sommes pas des consultants dont l’intimidant plan stratégique fait en sorte qu’on ne sait plus par où commencer. L’accompagnement que propose Plan humain vise à garder les choses simples, à se donner suffisamment de recul, à définir des objectifs clairs et des étapes clés – parfois aussi à se challenger. Nous tirons notre satisfaction tant de votre persévérance que de vos avancées.": { fr: "Nous ne sommes pas des consultants dont l’intimidant plan stratégique fait en sorte qu’on ne sait plus par où commencer. L’accompagnement que propose Plan humain vise à garder les choses simples, à se donner suffisamment de recul, à définir des objectifs clairs et des étapes clés – parfois aussi à se challenger. Nous tirons notre satisfaction tant de votre persévérance que de vos avancées.", en: "The last thing you need is a social responsibility strategy so daunting you don’t even know where to start. At Plan Humain, we keep it simple. We zoom out enough to chart the smoothest course toward your key goals. We push ourselves so we can push you, too, and we revel in your persistence as much as your progress." },
     
