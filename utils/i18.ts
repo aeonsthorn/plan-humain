@@ -108,6 +108,12 @@ const translations = {
     en: "Learn more about our partners",
   },
 
+  // Blog
+  Blogue: {
+    fr: "Blogue",
+    en: "Blog",
+  },
+
   //Équipe
 
   //Meta
