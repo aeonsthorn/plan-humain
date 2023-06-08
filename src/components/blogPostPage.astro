@@ -1,0 +1,38 @@
+---
+import i from "../../utils/i18";
+import Layout from "../layouts/Layout.astro";
+const { lang, path } = Astro.props;
+const { title, p1, p2, p3, image } = Astro.props;
+---
+
+<Layout lang={lang} path={path}>
+  <main>
+    <div class="px-4 sm:px-10 md:px-20 pb-10">
+      <h1 class="pt-0 pb-10 sm:py-10">
+        {title}
+      </h1>
+      <p class="pb-12 sm:pb-20">
+        {p1}
+      </p>
+      <p class="pb-12 sm:pb-20">
+        {p2}
+      </p>
+      <div class="relative flex h-full shadow-md mb-12">
+        <div
+          class="absolute bg-gradient-to-r from-custom-green-900 to-transparent w-full h-full z-10 opacity-60"
+        >
+        </div>
+        <div class="w-full sm:h-[350px] md:h-[450px] lg:h-[650px]">
+          <img
+            src={image}
+            alt="Blog image"
+            class="h-[300px] sm:h-full object-cover"
+          />
+        </div>
+      </div>
+      <p class="pb-12 sm:pb-20">
+        {p3}
+      </p>
+    </div>
+  </main>
+</Layout>
