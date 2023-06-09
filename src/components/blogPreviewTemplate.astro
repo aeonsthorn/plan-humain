@@ -1,0 +1,26 @@
+---
+import Button from "./Button.astro";
+const { lang, title, date, description, url, image, author } = Astro.props;
+---
+
+<div class="flex md:flex-row flex-col mb-12">
+  <div class="max-h-[400px] md:max-h-full md:w-5/12 shadow-md">
+    <img
+      src={image}
+      class="object-cover w-full h-full"
+      alt="Blog post picture"
+    />
+  </div>
+  <div class="bg-custom-green-900 md:w-7/12 p-5 sm:p-[60px] md:p-[40px]">
+    <div class="pt-0 sm-py-5">
+      <h2 class="mb-3 text-4xl">{title}</h2>
+      <p class="font-semibold text-sm">{date} | {author}</p>
+    </div>
+    <p class="py-5">
+      {description}
+    </p>
+    <div class="flex justify-start mt-12">
+      <Button text={lang === "fr" ? "Lire plus" : "Read more"} link={url} />
+    </div>
+  </div>
+</div>

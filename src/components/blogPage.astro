@@ -1,0 +1,65 @@
+---
+import i from "../../utils/i18";
+import BlogPreviewTemplate from "./blogPreviewTemplate.astro";
+import Layout from "../layouts/Layout.astro";
+const { lang, path } = Astro.props;
+---
+
+<Layout lang={lang} path={path}>
+  <main
+    class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-0 sm:pt-10"
+  >
+    <!-- Main image -->
+    <div>
+      <div class="relative w-full shadow-md">
+        <div
+          class="absolute bg-gradient-to-l from-custom-green-900 to-transparent w-full h-full z-40 opacity-60"
+        >
+        </div>
+        <div class="sm:h-[350px] md:h-[450px] lg:h-[650px]">
+          <picture>
+            <img
+              src="/servicesHeroImage.jpg"
+              class="z-0 h-full object-cover"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div
+          class="absolute top-[50%] -translate-y-[50%] right-[1.6%] sm:right-[8%] z-50 w-fit text-right"
+        >
+          <h1>
+            {i("Imaginer", lang)},<br />
+            {i("générer", lang)}<br />
+            {i("et mesurer", lang)}<br />
+            {i("l'impact social", lang)}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- Main description -->
+    <div class="px-4 sm:px-12 md:px-20 py-12 sm:py-20">
+      <p class="leading-relaxed">
+        {
+          i(
+            "Nous ne sommes pas des consultants dont l’intimidant plan stratégique fait en sorte qu’on ne sait plus par où commencer. L’accompagnement que propose Plan humain vise à garder les choses simples, à se donner suffisamment de recul, à définir des objectifs clairs et des étapes clés – parfois aussi à se challenger. Nous tirons notre satisfaction tant de votre persévérance que de vos avancées.",
+            lang
+          )
+        }
+      </p>
+    </div>
+
+    <!-- Blog -->
+    <BlogPreviewTemplate
+      lang={lang}
+      title={lang === "fr"
+        ? "Ceci est un article sur le rse"
+        : "This is an article on the rse"}
+      date={lang === "fr" ? "10 mai 2022" : "May 10, 2022"}
+      url="http://google.com"
+      author="Fannie"
+      image="/FannieProfilePic.jpg"
+      description="Femme de cœur et d’action, Fannie Perron incarne l’engagement social. Que ce soit à la tête de Plan humain, à la table de divers conseils d’administration ou encore sur son tapis de yoga, elle partage valeurs, connaissances et contacts avec une générosité dans une classe à part. Détentrice d’un DESS en gestion de HEC Montréal et formée en coaching, elle cumule plus de 20 années d’expérience d’organisations de toutes tailles et secteurs d’activité."
+    />
+  </main>
+</Layout>

@@ -9,6 +9,7 @@ const { currentPath, lang } = Astro.props;
   class="flex pt-3 w-full h-full z-80 sticky pb-2 top-0 duration-700 scrollTigger shadow-xl"
   id="navbar"
 >
+  <!-- Mobile navbar -->
   <div
     class="border border-white w-full absolute bottom-0 duration-1000 opacity-0"
     id="navbar-underline"
@@ -42,6 +43,19 @@ const { currentPath, lang } = Astro.props;
           )}
         >
           Services
+        </p>
+      </a>
+      <a
+        href={lang == "en" ? "/en/" + "blog" : "/blog"}
+        class="overflow-hidden"
+      >
+        <p
+          class={classNames(
+            currentPath === "/blog/" ? "font-black" : "font-thin",
+            "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
+          )}
+        >
+          {i("Blogue", "fr")}
         </p>
       </a>
       <a
@@ -79,6 +93,8 @@ const { currentPath, lang } = Astro.props;
       </a>
     </div>
   </div>
+
+  <!-- Desktop navbar -->
   <div
     class="max-w-[1300px] m-auto w-full flex items-center justify-between relative px-4 sm:px-12 z-100"
   >
@@ -163,6 +179,16 @@ const { currentPath, lang } = Astro.props;
           )}
         >
           {i("services", lang)}
+        </p>
+      </a>
+      <a href={lang == "en" ? "/en/" + "blog" : "/blog"}>
+        <p
+          class={classNames(
+            currentPath === "/blog/" ? "font-bold " : "",
+            "cursor-pointer hover:text-white uppercase h6"
+          )}
+        >
+          {i("Blogue", lang)}
         </p>
       </a>
       <a href={lang == "en" ? "/en/" + "aboutUs" : "/aboutUs"}>
