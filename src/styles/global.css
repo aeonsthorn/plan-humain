@@ -8,6 +8,18 @@
 @tailwind components;
 @tailwind utilities;
 
+p#logo-text {
+  font-size: 10px !important;
+  transform: translateX(-5%);
+  font-weight: 600 !important;
+  line-height: 1.2em;
+}
+@media (max-width: 600px) {
+  p#logo-text {
+    font-size: 8px !important;
+  }
+}
+
 @font-face {
   font-family: "Gotham";
   src: url("/fonts/Gotham-Book.otf");
@@ -346,4 +358,15 @@ svg line {
 
 svg:hover line {
   transform: translate(0%);
+}
+
+/* .img-fluid {
+  max-width: 100%;
+  height: auto;
+} */
+
+@media (max-width: 600px) {
+  #footer-logo-line {
+    transform: translateY(-15%);
+  }
 }

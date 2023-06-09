@@ -4,23 +4,29 @@ import PrincipalServices from "../components/principalServices.astro";
 import i from "../../utils/i18";
 import Layout from "../layouts/Layout.astro";
 
-const { lang, path } = Astro.props;
+const { lang, path, title, description } = Astro.props;
 ---
 
-<Layout lang={lang} path={path}>
+<Layout
+  lang={lang}
+  path={path}
+  headerImgSrc="/Galerie_Plan_Humain_56.jpg"
+  title={title}
+  description={description}
+>
   <main
     class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-0 sm:pt-10"
   >
     <div>
       <div class="relative w-full shadow-md">
         <div
-          class="absolute bg-gradient-to-l from-custom-green-900 to-transparent w-full h-full z-40 opacity-60"
+          class="absolute bg-gradient-to-l from-black to-transparent w-full h-full z-40 opacity-40"
         >
         </div>
-        <div class="sm:h-[350px] md:h-[450px] lg:h-[650px]">
+        <div class="h-[240px] sm:h-[350px] md:h-[450px] lg:h-[650px]">
           <picture>
             <img
-              src="/servicesHeroImage.jpg"
+              src="/Galerie_Plan_Humain_56.jpg"
               class="z-0 h-full object-cover"
               alt=""
             />
@@ -72,7 +78,7 @@ const { lang, path } = Astro.props;
           </p>
         </div>
         <div class="block sm:hidden">
-          <div class="mt-5 flex">
+          <div class="mt-7 flex">
             <Button
               text={i("Parlez-nous de votre projet", lang)}
               link={i("/contact/", lang)}

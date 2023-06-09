@@ -2,8 +2,12 @@
 const { text, link } = Astro.props;
 ---
 
-<a href={link} class="svg-btn z-0 relative w-auto">
-  <svg
+<a
+  href={link}
+  class="svg-btn z-0 relative w-auto cursor-pointer border-2 border-[#e3ddbd] hover:border-white"
+  style="transition:border 0.2s ease-in-out;"
+>
+  <!-- <svg
     viewBox="0 0 146 50"
     class="absolute top-0 left-0"
     style="height:130%"
@@ -15,10 +19,10 @@ const { text, link } = Astro.props;
     <line x1="0" x2="0" y1="0" y2="38"></line>
 
     <line class="anim-top" x1="0" x2="146" y1="0" y2="0"></line>
-    <line class="anim-right" x1="146" x2="146" y1="0" y2="38"></line>
+    <line class="anim-right" x1="146" x2="146" y1="0" y2="50"></line>
     <line class="anim-bottom" x1="0" x2="146" y1="38" y2="38"></line>
     <line class="anim-left" x1="0" x2="0" y1="0" y2="38"></line>
-  </svg>
+  </svg> -->
   <p class="w-full" style="color:#e3ddbd;">
     {text}
   </p>

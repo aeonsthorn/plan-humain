@@ -1,5 +1,5 @@
 let toggled = true;
-const handleDropDownMenu = () => {
+window.handleDropDownMenu = handleDropDownMenu = () => {
   if (toggled) {
     gsap.to("#dropdownMenu", {
       y: -50,
@@ -44,9 +44,7 @@ const footerAnimation = gsap.from(".loadInLineFooter", {
   duration: 1,
   width: "0",
   ease: "ease-in",
-  onStart: () => {
-    console.log("starting the animation");
-  },
+
   scrollTrigger: {
     trigger: ".scrollTiggerFooter",
     start: "top 80%",
@@ -66,8 +64,4 @@ if (
 
 document
   .getElementsByClassName("langSelector")[0]
-  .addEventListener("click", () => handleDropDownMenu());
-
-document
-  .getElementById("hamburgerMenu")
   .addEventListener("click", () => handleDropDownMenu());

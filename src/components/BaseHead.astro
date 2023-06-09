@@ -7,17 +7,22 @@ import "../styles/global.css";
 export interface Props {
   title: string;
   description: string;
-  image?: string;
+  headerImgSrc?: string;
 }
 
-const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
+const { title, description, headerImgSrc } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="generator" content={Astro.generator} />
+
+{headerImgSrc && <link rel="preload" as="image" href={headerImgSrc} />}
+
+<!-- <link rel="preload" as="font" href="/fonts/Gotham-Medium.otf" type="font/otf" />
+<link rel="preload" as="font" href="/fonts/Gotham-Book.otf" type="font/otf" />
+<link rel="preload" as="font" href="/fonts/Gotham-Light.otf" type="font/otf" /> -->
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -26,31 +31,10 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content="https://planhumain.com" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content="/fb-logo.png" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
-
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-  integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-  is:inline
-  defer
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-  is:inline
-  defer
-></script>
-<script src="../../utils/animation.js"></script>
+<script defer src="/js/gsap.js"></script>
+<script async src="/js/analytics.js"></script>

@@ -1,6 +1,15 @@
 ---
 import ConfirmationPage from "../../components/confirmationPage.astro";
 const lang = "en";
+import i from "../../../utils/i18";
 ---
 
-<ConfirmationPage lang={lang} path="/confirmation/" />
+<ConfirmationPage
+  lang={lang}
+  path="/confirmation/"
+  title={i("Bien reçu, merci.", lang)}
+  description={i(
+    "Eh oui, on s’appelle « Plan humain » et cette confirmation d’envoi vous est transmise par un robot. N’ayez crainte, un membre de notre équipe, en chair et en os, communiquera avec vous dans les meilleurs délais.",
+    lang
+  )}
+/>

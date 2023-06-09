@@ -138,9 +138,9 @@ const translations = {
     en: "Our cofounders",
   },
   "Co-fondatrice": { fr: "Co-fondatrice", en: "Cofounder" },
-  "Femme de cœur et d’action, Fannie Perron incarne l’engagement social. Que ce soit à la tête de Plan humain, à la table de divers conseils d’administration ou encore sur son tapis de yoga, elle partage valeurs, connaissances et contacts avec une générosité dans une classe à part. Détentrice d’un DESS en gestion de HEC Montréal et formée en coaching, elle cumule plus de 20 années d’expérience d’organisations de toutes tailles et secteurs d’activité.":
+  "Femme de cœur et d’action, Fannie Perron incarne l’engagement social. Que ce soit à la tête de Plan humain, à la table de divers conseils d’administration ou encore sur son tapis de yoga, elle partage valeurs, connaissances et contacts avec une générosité dans une classe à part. Détentrice d’un DESS en gestion de HEC Montréal et formée en coaching, elle cumule plus de 20 années d’expérience auprès d’organisations de toutes tailles et secteurs d’activité.":
     {
-      fr: "Femme de cœur et d’action, Fannie Perron incarne l’engagement social. Que ce soit à la tête de Plan humain, à la table de divers conseils d’administration ou encore sur son tapis de yoga, elle partage valeurs, connaissances et contacts avec une générosité dans une classe à part. Détentrice d’un DESS en gestion de HEC Montréal et formée en coaching, elle cumule plus de 20 années d’expérience d’organisations de toutes tailles et secteurs d’activité.",
+      fr: "Femme de cœur et d’action, Fannie Perron incarne l’engagement social. Que ce soit à la tête de Plan humain, à la table de divers conseils d’administration ou encore sur son tapis de yoga, elle partage valeurs, connaissances et contacts avec une générosité dans une classe à part. Détentrice d’un DESS en gestion de HEC Montréal et formée en coaching, elle cumule plus de 20 années d’expérience auprès d’organisations de toutes tailles et secteurs d’activité.",
       en: "Fannie Perron is a woman of action with a big heart. For her, social responsibility is a way of life. Whether at the helm of Plan Humain, on a board of directors, or in the yoga studio, she shares her values, knowledge, and connections with boundless generosity. Fannie earned a specialized graduate diploma (DESS) in management from HEC Montréal and is trained as a coach. In her work at Plan Humain, she draws on more than 20 years of experience working with organizations large and small across many industries.",
     },
   "Implication bénévole actuelle": {
@@ -161,9 +161,9 @@ const translations = {
   },
 
   "Co-fondateur": { fr: "Co-fondateur", en: "Cofounder" },
-  "Si Pierre Leroux avait quelque part un bureau attitré, il deviendrait de facto le point de rencontre du monde des affaires, du développement humain et de la philanthropie. Sa curiosité sans bornes et son sens de l’observation sociale lui ont inspiré plusieurs projets entrepreneuriaux à succès, réunis au sein du réseau H&#38;Co. On l’aperçoit le plus souvent devant un café, conseillant tant les leaders de jeunes pousses que de grandes organisations. Avec Pierre, l’humain fait invariablement partie du plan.":
+  "Si Pierre Leroux avait quelque part un bureau attitré, il deviendrait de facto le point de rencontre du monde des affaires, du développement humain et de la philanthropie. Sa curiosité sans bornes et son sens de l’observation sociale lui ont inspiré plusieurs projets entrepreneuriaux à succès, réunis au sein du réseau H&Co. On l’aperçoit le plus souvent devant un café, conseillant tant les leaders de jeunes pousses que de grandes organisations. Avec Pierre, l’humain fait invariablement partie du plan.":
     {
-      fr: "Si Pierre Leroux avait quelque part un bureau attitré, il deviendrait de facto le point de rencontre du monde des affaires, du développement humain et de la philanthropie. Sa curiosité sans bornes et son sens de l’observation sociale lui ont inspiré plusieurs projets entrepreneuriaux à succès, réunis au sein du réseau H&#38;Co. On l’aperçoit le plus souvent devant un café, conseillant tant les leaders de jeunes pousses que de grandes organisations. Avec Pierre, l’humain fait invariablement partie du plan.",
+      fr: "Si Pierre Leroux avait quelque part un bureau attitré, il deviendrait de facto le point de rencontre du monde des affaires, du développement humain et de la philanthropie. Sa curiosité sans bornes et son sens de l’observation sociale lui ont inspiré plusieurs projets entrepreneuriaux à succès, réunis au sein du réseau H&Co. On l’aperçoit le plus souvent devant un café, conseillant tant les leaders de jeunes pousses que de grandes organisations. Avec Pierre, l’humain fait invariablement partie du plan.",
       en: "If Pierre Leroux had a brick-and-mortar office, it’d be the place where businesspeople, philanthropists, and human development experts congregate. His insatiable curiosity and knack for reading people led him to create several of the successful ventures that now make up H&Co. Day-to-day, you can find him advising everyone from startup founders to C-suite executives, usually with a coffee in hand. For Pierre, people are the heart of every good plan.",
     },
 
@@ -182,6 +182,15 @@ const translations = {
       en: "Plans born of the best intentions deserve the best follow-through. We’re proud to be backed by the proven expertise of an entire network of organizations that share the same values.",
     },
 
+  "L’automne dernier, Fannie nous a accompagnés tout en douceur afin de puiser au fond de notre ADN et trouver ce que nous recherchions depuis des années: notre cause sociale. Par des entrevues, des ateliers et des réflexions, elle nous a permis de voir clairement la route pour notre destination vers un engagement social réussi. Merci Fannie!":
+    {
+      fr: "L’automne dernier, Fannie nous a accompagnés tout en douceur afin de puiser au fond de notre ADN et trouver ce que nous recherchions depuis des années: notre cause sociale. Par des entrevues, des ateliers et des réflexions, elle nous a permis de voir clairement la route pour notre destination vers un engagement social réussi. Merci Fannie!",
+      en: "Last fall, Fannie guided us through a process that helped us find our social cause. Through interviews, workshops, and reflection, she helped us see the path to a successful CSR initiative. Thank you, Fannie!",
+    },
+  "-Janick Parent, Vice-présidente marketing, Prana": {
+    fr: "-Janick Parent, Vice-présidente marketing, Prana",
+    en: "-Janick Parent, Marketing VP, Prana",
+  },
   //Contact
   //Meta
   "Nous joindre | Plan humain": {
@@ -194,6 +203,15 @@ const translations = {
       en: "We help companies across Quebec reach their CSR objectives. Tell us about the impact you’ve always wanted to make.",
     },
   //Page
+  "Une expérience": {
+    fr: "Une expérience",
+    en: "A human",
+  },
+
+  humaine: {
+    fr: "humaine",
+    en: "experience",
+  },
   Commencer: { fr: "Commencer", en: "Getting started" },
   "quelque part": { fr: "quelque part", en: "is easy if you" },
   "c'est plus facile ici.": {
@@ -218,7 +236,17 @@ const translations = {
   Courriel: { fr: "Courriel", en: "Email" },
   Téléphone: { fr: "Téléphone", en: "Phone" },
   Message: { fr: "Message", en: "Message" },
-  "Envoyer maintenant": { fr: "Envoyer maintenant", en: "Send" },
+  Envoyer: { fr: "Envoyer", en: "Send" },
+
+  "Une entreprise": {
+    fr: "Une entreprise",
+    en: "Member of the",
+  },
+
+  "membre du réseau": {
+    fr: "membre du réseau",
+    en: "network",
+  },
 
   //Merci
   //Meta
@@ -241,8 +269,8 @@ const translations = {
   },
 
   "/en/": {
-    fr: "/",
-    en: "/en/",
+    fr: "/en/",
+    en: "/",
   },
 
   "/services/": {
@@ -263,6 +291,11 @@ const translations = {
     en: "/en/confirmation/",
   },
 
+  "https://planhumain.com/confirmation/": {
+    fr: "https://planhumain.com/confirmation/",
+    en: "https://planhumain.com/en/confirmation/",
+  },
+
   //Footer
 
   "Produit par Carbonia Web": {
@@ -280,6 +313,30 @@ const translations = {
   "https://sismikimpact.com/fr": {
     fr: "https://sismikimpact.com/fr",
     en: "https://sismikimpact.com/en",
+  },
+
+  "https://k72.ca/": {
+    fr: "https://k72.ca/",
+    en: "https://k72.ca/en/",
+  },
+
+  "https://www.junglemedia.ca/": {
+    fr: "https://www.junglemedia.ca/",
+    en: "https://www.junglemedia.ca/en/",
+  },
+
+  "https://www.brp.com/": {
+    fr: "https://www.brp.com/fr/",
+    en: "https://www.brp.com/",
+  },
+  "https://pranafoods.ca/": {
+    fr: "https://pranafoods.ca/fr/",
+    en: "https://pranafoods.ca",
+  },
+
+  "https://h-co.ca/fr": {
+    fr: "https://h-co.ca/fr",
+    en: "https://h-co.ca/en",
   },
 };
 

@@ -1,6 +1,15 @@
 ---
 import ContactPage from "../../components/contactPage.astro";
 const lang = "en";
+import i from "../../../utils/i18";
 ---
 
-<ContactPage lang={lang} path="/contact/" />
+<ContactPage
+  lang={lang}
+  path="/contact/"
+  title={i("Nous joindre | Plan humain", lang)}
+  description={i(
+    "Partout à travers le Québec, nous aidons les entreprises  à atteindre leurs objectifs d’engagement social. Discutons de vos aspirations et priorités.",
+    lang
+  )}
+/>

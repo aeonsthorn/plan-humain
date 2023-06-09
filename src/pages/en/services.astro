@@ -1,6 +1,15 @@
 ---
 import ServicesPage from "../../components/servicesPage.astro";
 const lang = "en";
+import i from "../../../utils/i18";
 ---
 
-<ServicesPage lang={lang} path="/services/" />
+<ServicesPage
+  lang={lang}
+  path="/services/"
+  title={i("Nos services | Plan humain", lang)}
+  description={i(
+    "Stratégie. Évaluation. Impartition. Coaching. Nos experts en RSE vous aident à imaginer, générer et mesurer l’impact social.",
+    lang
+  )}
+/>

@@ -3,33 +3,43 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 
 import i from "../../utils/i18";
-const { lang, path } = Astro.props;
+const { lang, path, title, description } = Astro.props;
 ---
 
-<Layout lang={lang} path={path}>
+<Layout
+  lang={lang}
+  path={path}
+  headerImgSrc="/heroImage.webp"
+  title={title}
+  description={description}
+>
   <main
     data-page-name="home"
     class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 py-0 sm:py-10 h-full"
   >
-    <div class="relative flex h-full shadow-md">
+    <div
+      class="relative flex h-full shadow-md sm:h-[350px] md:h-[450px] lg:h-[650px]"
+    >
       <div
-        class="absolute bg-gradient-to-r from-custom-green-900 to-transparent w-full h-full z-10 opacity-60"
+        class="absolute bg-gradient-to-r from-black to-transparent w-full h-full z-10 opacity-30"
       >
       </div>
       <div class="w-full sm:h-[350px] md:h-[450px] lg:h-[650px]">
         <picture>
-          <source
-            srcset="/heroImageSmall.jpg"
-            media="(max-width: 650px)"
-            type="image/jpg"
-          />
-          <source
+          <!-- <source
             srcset="/heroImage.webp"
             media="(max-width: 650px)"
             type="image/webp"
           />
+          <source
+            srcset="/heroImageSmall.jpg"
+            media="(max-width: 650px)"
+            type="image/jpg"
+          /> -->
+
           <img
-            src="/heroImage.jpg"
+            style="object-position:1% 30%;"
+            src="/Galerie_Plan_Humain_109.jpg"
             alt="plan humain logo"
             class="h-[300px] sm:h-full object-cover"
           />
@@ -60,41 +70,112 @@ const { lang, path } = Astro.props;
       <Button text={i("Notre équipe", lang)} link={i("/aboutUs/", lang)} />
     </div>
 
+    <div
+      class="w-full bg-custom-green-900 px-0 sm:px-12 md:px-20 py-12 sm:py-20 mb-12 sm:mb-20"
+    >
+      <div class="px-4 sm:px-0 flex flex-col md:flex-row">
+        <div class="lg:w-6/12 xl:w-5/12">
+          <h3 class="uppercase">
+            {i("Une expérience", lang)}<br />{i("humaine", lang)}
+          </h3>
+          <div class="mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              style="width:48px;height:48px;transform:rotate(180deg);"
+              fill="rgb(227 221 189)"
+              ><path d="M0 0h24v24H0z" fill="none"></path><path
+                d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+            </svg>
+            <!-- <svg
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              style="width:48px;height:48px;transform:rotate(180deg);"
+              ><path
+                
+                d="M29 23h8v-8h-8Zm-18 0h8v-8h-8Zm23.85 11q-1.25 0-1.875-1.025T32.9 30.85L35.3 26H29q-1.25 0-2.125-.875T26 23v-8q0-1.25.875-2.125T29 12h8q1.25 0 2.125.875T40 15v10.7q0 .35-.075.7t-.225.65l-2.9 5.75q-.25.55-.775.875Q35.5 34 34.85 34Zm-18 0q-1.25 0-1.875-1.025T14.9 30.85L17.3 26H11q-1.25 0-2.125-.875T8 23v-8q0-1.25.875-2.125T11 12h8q1.25 0 2.125.875T22 15v10.7q0 .35-.075.7t-.225.65l-2.9 5.75q-.25.55-.775.875Q17.5 34 16.85 34ZM15 19Zm18 0Z"
+              ></path>
+            </svg> -->
+          </div>
+        </div>
+        <div class="lg:w-6/12 xl:w-7/12">
+          <div class="">
+            <div class="">
+              <p class="mb-4">
+                {
+                  i(
+                    "L’automne dernier, Fannie nous a accompagnés tout en douceur afin de puiser au fond de notre ADN et trouver ce que nous recherchions depuis des années: notre cause sociale. Par des entrevues, des ateliers et des réflexions, elle nous a permis de voir clairement la route pour notre destination vers un engagement social réussi. Merci Fannie!",
+                    lang
+                  )
+                }
+              </p>
+              <p>
+                {i("-Janick Parent, Vice-présidente marketing, Prana", lang)}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="px-4 sm:px-10 md:px-20 pb-6 sm:pb-10">
-      <h3 class="pb-10">{i("Nos clients", lang)}</h3>
+      <h3 class="md:pb-10 uppercase">{i("Nos clients", lang)}</h3>
 
       <div
-        class="flex items-center justify-between sm:justify-evenly w-full py-12 sm:py-20"
+        class="flex items-center justify-between sm:justify-evenly w-full py-12"
       >
         <a
-          href={i("https://h-co.ca/", lang)}
-          class="h-fit w-16 sm:w-20 cursor-pointer"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <picture>
-            <source srcset="/hcoLogo.webp" />
-            <img
-              src="/hcoLogo.png"
-              class="object-cover hover:brightness-0 hover:invert"
-              alt="hco Logo"
-            />
-          </picture>
-        </a>
-        <a
-          href={i("https://sismikimpact.com/fr", lang)}
+          href={i("https://pranafoods.ca/", lang)}
           class="h-fit w-28 cursor-pointer"
           target="_blank"
+          aria-label="Link to Prana foods website"
           rel="noreferrer"
         >
-          <picture>
-            <source srcset="/sismkLogo.webp" />
-            <img
-              src="/sismkLogo.png"
-              class="object-cover hover:brightness-0 hover:invert"
-              alt="Sismik Logo"
-            />
-          </picture>
+          <img
+            width="103"
+            height="44"
+            src="/LOGO_BIL_CMYK.png"
+            class="object-cover"
+            alt="Prana foods Logo"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href={i("https://www.brp.com/", lang)}
+          class="h-fit w-16 cursor-pointer"
+          target="_blank"
+          aria-label="Link to BRP website"
+          rel="noreferrer"
+        >
+          <img
+            width="103"
+            height="44"
+            src="/brp-logo.png"
+            class="object-cover"
+            alt="Brp Logo"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href={i("https://k72.ca/", lang)}
+          class="h-fit w-28 cursor-pointer"
+          target="_blank"
+          aria-label="Link to K72 website"
+          rel="noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="103"
+            height="44"
+            viewBox="0 0 103 44"
+          >
+            <path
+              fill="black"
+              d="M35.1441047,8.4486911 L58.6905011,8.4486911 L58.6905011,-1.3094819e-14 L35.1441047,-1.3094819e-14 L35.1441047,8.4486911 Z M20.0019577,0.000230366492 L8.83414254,25.3433089 L18.4876971,25.3433089 L29.5733875,0.000230366492 L20.0019577,0.000230366492 Z M72.5255345,0.000691099476 L72.5255345,8.44846073 L94.3991559,8.44846073 L94.3991559,16.8932356 L72.5275991,16.8932356 L72.5275991,19.5237906 L72.5255345,19.5237906 L72.5255345,43.9274346 L102.80937,43.9274346 L102.80937,35.4798953 L80.9357483,35.4798953 L80.9357483,25.3437696 L94.3996147,25.3428482 L94.3996147,16.8953089 L102.80937,16.8953089 L102.80937,0.000691099476 L72.5255345,0.000691099476 Z M-1.30398043e-14,43.9278953 L8.78642762,43.9278953 L8.78642762,0.0057591623 L-1.30398043e-14,0.0057591623 L-1.30398043e-14,43.9278953 Z M58.6849955,8.4486911 L43.1186904,43.9274346 L52.3166592,43.9274346 L67.9877996,8.4486911 L58.6849955,8.4486911 Z M18.4688864,25.3437696 L26.7045278,43.9278953 L36.2761871,43.9278953 L28.1676325,25.3375497 L18.4688864,25.3437696 Z"
+            ></path>
+          </svg>
         </a>
       </div>
     </div>

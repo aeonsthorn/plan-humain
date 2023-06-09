@@ -1,6 +1,15 @@
 ---
 import AboutUsPage from "../components/aboutUsPage.astro";
 const lang = "fr";
+import i from "../../utils/i18";
 ---
 
-<AboutUsPage lang={lang} path="/aboutUs/" />
+<AboutUsPage
+  lang={lang}
+  path="/aboutUs/"
+  title={i("Notre équipe | Plan humain", lang)}
+  description={i(
+    "Fannie Perron, Pierre Leroux et tous nos collaborateur.trice.s se distinguent par leur compréhension de la réalité des milieux corporatif et OBNL.",
+    lang
+  )}
+/>

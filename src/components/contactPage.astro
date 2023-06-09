@@ -2,34 +2,30 @@
 import i from "../../utils/i18";
 import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
-const { lang } = Astro.props;
+const { lang, title, description } = Astro.props;
 ---
 
-<Layout lang={lang}>
+<Layout
+  lang={lang}
+  path="/contact/"
+  headerImgSrc="/contactUsImage.webp"
+  title={title}
+  description={description}
+>
   <main
     class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-0 sm:pt-10 min-h-screen"
   >
     <div class="h-full shadow-md">
       <div class="relative w-full h-full max-h-[1200px]">
         <div
-          class="absolute bg-gradient-to-r from-custom-green-900 to-transparent w-full h-full z-40 opacity-60"
+          class="absolute bg-gradient-to-r from-black to-transparent w-full h-full z-40 opacity-[0.35]"
         >
         </div>
-        <div class="sm:h-[350px] md:h-[450px] lg:h-[650px]">
+        <div class="h-[248px] sm:h-[350px] md:h-[450px] lg:h-[650px]">
           <picture>
-            <!-- <source
-                srcset="/contactUsSmallImage.webp"
-                media="(max-width: 650px)"
-                type="image/webp"
-              /> -->
-            <!-- <source
-                srcset="contactUsSmallImage.png"
-                media="(max-width: 650px)"
-                type="image/png"
-              /> -->
-            <source srcset="/contactUsImage.webp" type="image/webp" />
+            <!-- <source srcset="/contactUsImage.webp" type="image/webp" /> -->
             <img
-              src="/header_contact.jpg"
+              src="/Galerie_Plan_Humain_34.jpg"
               class="z-30 h-full object-cover"
               alt=""
             />
@@ -57,8 +53,15 @@ const { lang } = Astro.props;
       </p>
     </div>
     <form
+      method="POST"
+      action="https://formspree.io/f/mayzwlqg"
       class="bg-custom-green-900 px-4 sm:px-12 md:px-20 py-12 sm:py-20 mb-20"
     >
+      <input
+        type="hidden"
+        name="_next"
+        value={i("https://planhumain.com/confirmation/", lang)}
+      />
       <h3 class="uppercase">{i("Parlez-nous de votre projet", lang)}</h3>
       <p class="leading-relaxed py-6 sm:py-10">
         {
@@ -83,10 +86,12 @@ const { lang } = Astro.props;
           <div>
             <p class="font-semibold">{i("Prénom", lang)}</p>
             <div class="w-full mt-5 overflow-hidden">
-              <input class="bg-transparent outline outline-none" /><div
-                class="bg-custom-beige-100/50 h-[2px]"
-              >
-              </div>
+              <input
+                name="Prénom"
+                required
+                type="text"
+                class="bg-transparent outline outline-none"
+              /><div class="bg-custom-beige-100/50 h-[2px]"></div>
             </div>
           </div>
         </div>
@@ -94,7 +99,12 @@ const { lang } = Astro.props;
           <div>
             <p class="font-semibold">{i("Nom", lang)}</p>
             <div class="w-full mt-5 overflow-hidden scrollTiggerContact">
-              <input class="bg-transparent outline outline-none" />
+              <input
+                required
+                name="Nom"
+                type="text"
+                class="bg-transparent outline outline-none"
+              />
               <div class="bg-custom-beige-100/50 h-[2px]"></div>
             </div>
           </div>
@@ -103,7 +113,11 @@ const { lang } = Astro.props;
           <div>
             <p class="font-semibold">{i("Courriel", lang)}</p>
             <div class="w-full mt-5 overflow-hidden">
-              <input class="bg-transparent outline outline-none" />
+              <input
+                required
+                name="Courriel"
+                class="bg-transparent outline outline-none"
+              />
               <div class="bg-custom-beige-100/50 h-[2px]"></div>
             </div>
           </div>
@@ -112,7 +126,7 @@ const { lang } = Astro.props;
           <div>
             <p class="font-semibold">{i("Téléphone", lang)}</p>
             <div class="w-full mt-5 overflow-hidden">
-              <input class="bg-transparent outline outline-none" />
+              <input type="tel" class="bg-transparent outline outline-none" />
               <div class="bg-custom-beige-100/50 h-[2px]"></div>
             </div>
           </div>
@@ -122,17 +136,28 @@ const { lang } = Astro.props;
         <p class="font-semibold">Message</p>
         <div class="w-full mt-5 overflow-hidden">
           <textarea
+            name="Message"
             rows="3"
             class="bg-transparent outline outline-none resize-none"></textarea>
           <div class="bg-custom-beige-100/50 h-[2px]"></div>
         </div>
       </div>
       <div id="submitForm" class="flex justify-center pt-10 w-full">
-        <Button
-          text={i("Envoyer maintenant", lang)}
-          link={i("/confirmation/", lang)}
-        />
+        <Button text={i("Envoyer", lang)} />
       </div>
+
+      <script is:inline>
+        const submitForm = document.getElementById("submitForm");
+        const form = document.querySelector("form");
+
+        submitForm.addEventListener("click", (e) => {
+          form.reportValidity();
+
+          if (form.checkValidity()) {
+            form.submit();
+          }
+        });
+      </script>
     </form>
   </main>
 </Layout>

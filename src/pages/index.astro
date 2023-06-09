@@ -1,6 +1,15 @@
 ---
 import HomePage from "../components/homePage.astro";
+import i from "../../utils/i18";
 const lang = "fr";
 ---
 
-<HomePage lang={lang} path="/" />
+<HomePage
+  lang={lang}
+  path="/"
+  title={i("Plan humain : de l'engagement à l’impact", lang)}
+  description={i(
+    "Nous aidons les entreprises à s'engager en RSE avec une approche sur mesure, graduelle et viable qui crée de la valeur à chaque point de contact.",
+    lang
+  )}
+/>
