@@ -351,11 +351,11 @@ export default function i(
   lang: "fr" | "en"
 ) {
   if (!lang) {
-    throw new Error("lang is required");
+    return "";
   }
 
   if (!textToTranslate) {
-    throw new Error("textToTranslate is required");
+    return "";
   }
 
   return translations[textToTranslate][lang];

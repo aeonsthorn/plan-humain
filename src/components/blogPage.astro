@@ -2,6 +2,14 @@
 import i from "../../utils/i18";
 import BlogPreviewTemplate from "./blogPreviewTemplate.astro";
 import Layout from "../layouts/Layout.astro";
+const allPosts = await Astro.glob("../pages/blog/*.md");
+
+// TODO (kui) : remove when understood
+// https://docs.astro.build/en/tutorial/5-astro-api/1/
+allPosts.forEach((post) => {
+  console.log(post.frontmatter);
+});
+
 const { lang, path } = Astro.props;
 ---
 
@@ -49,8 +57,22 @@ const { lang, path } = Astro.props;
       </p>
     </div>
 
+    {
+      allPosts.map((post) => (
+        <BlogPreviewTemplate
+          lang={lang}
+          title={post.frontmatter.title}
+          date={post.frontmatter.pubDate}
+          url={post.url}
+          author={post.frontmatter.author}
+          image={post.frontmatter.image.src}
+          description={post.frontmatter.description}
+        />
+      ))
+    }
+
     <!-- Blog -->
-    <BlogPreviewTemplate
+    <!-- <BlogPreviewTemplate
       lang={lang}
       title={lang === "fr"
         ? "Ceci est un article sur le rse"
@@ -60,6 +82,6 @@ const { lang, path } = Astro.props;
       author="Fannie"
       image="/FannieProfilePic.jpg"
       description="Femme de cœur et d’action, Fannie Perron incarne l’engagement social. Que ce soit à la tête de Plan humain, à la table de divers conseils d’administration ou encore sur son tapis de yoga, elle partage valeurs, connaissances et contacts avec une générosité dans une classe à part. Détentrice d’un DESS en gestion de HEC Montréal et formée en coaching, elle cumule plus de 20 années d’expérience d’organisations de toutes tailles et secteurs d’activité."
-    />
+    /> -->
   </main>
 </Layout>
