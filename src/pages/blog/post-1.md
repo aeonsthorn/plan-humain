@@ -13,20 +13,10 @@ lang: fr
 
 # My First Blog Post
 
-Published on: 2022-07-01
+Avec Plan humain, l’engagement social dépasse les bonnes intentions et les campagnes de communication. Notre équipe accompagne les leaders dans l’adoption d’une approche structurée, viable à long terme et créatrice de valeur à chaque point de contact. Un geste à la fois, nous permettons aux organisations de s’engager à prospérer en changeant des vies pour le mieux. S’engager à élever la barre. S’engager à inspirer.
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+Avec Plan humain, l’engagement social dépasse les bonnes intentions et les campagnes de communication. Notre équipe accompagne les leaders dans l’adoption d’une approche structurée, viable à long terme et créatrice de valeur à chaque point de contact. Un geste à la fois, nous permettons aux organisations de s’engager à prospérer en changeant des vies pour le mieux. S’engager à élever la barre. S’engager à inspirer."
 
-<img  class="h-[300px] sm:h-full object-cover" id="featured-image" src="/FannieProfilePic.jpg" alt="alt text">
+<img  class="h-[300px] sm:h-full object-cover" id="featured-image" src="/heroImage.jpg" alt="alt text">
 
-## What I've accomplished
-
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+Avec Plan humain, l’engagement social dépasse les bonnes intentions et les campagnes de communication. Notre équipe accompagne les leaders dans l’adoption d’une approche structurée, viable à long terme et créatrice de valeur à chaque point de contact. Un geste à la fois, nous permettons aux organisations de s’engager à prospérer en changeant des vies pour le mieux. S’engager à élever la barre. S’engager à inspirer."
