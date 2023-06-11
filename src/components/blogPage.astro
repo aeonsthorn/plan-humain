@@ -3,31 +3,23 @@ import i from "../../utils/i18";
 import BlogPreviewTemplate from "./blogPreviewTemplate.astro";
 import Layout from "../layouts/Layout.astro";
 const allPosts = await Astro.glob("../pages/blog/*.md");
-
-// TODO (kui) : remove when understood
-// https://docs.astro.build/en/tutorial/5-astro-api/1/
-allPosts.forEach((post) => {
-  console.log(post.frontmatter);
-});
-
 const { lang, path } = Astro.props;
 ---
 
-<Layout lang={lang} path={path}>
+<Layout lang={lang} path={path} title="" description="">
   <main
     class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-0 sm:pt-10"
   >
-    <!-- Main image -->
     <div>
       <div class="relative w-full shadow-md">
         <div
-          class="absolute bg-gradient-to-l from-custom-green-900 to-transparent w-full h-full z-40 opacity-60"
+          class="absolute bg-gradient-to-l from-black to-transparent w-full h-full z-40 opacity-40"
         >
         </div>
-        <div class="sm:h-[350px] md:h-[450px] lg:h-[650px]">
+        <div class="h-[240px] sm:h-[350px] md:h-[450px] lg:h-[650px]">
           <picture>
             <img
-              src="/servicesHeroImage.jpg"
+              src="/Galerie_Plan_Humain_56.jpg"
               class="z-0 h-full object-cover"
               alt=""
             />
@@ -45,8 +37,7 @@ const { lang, path } = Astro.props;
         </div>
       </div>
     </div>
-    <!-- Main description -->
-    <div class="px-4 sm:px-12 md:px-20 py-12 sm:py-20">
+    <div class="px-4 sm:px-12 md:px-20 py-10 sm:py-16">
       <p class="leading-relaxed">
         {
           i(
@@ -56,7 +47,6 @@ const { lang, path } = Astro.props;
         }
       </p>
     </div>
-
     {
       allPosts.map((post) => (
         <BlogPreviewTemplate
