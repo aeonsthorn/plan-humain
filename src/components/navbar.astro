@@ -45,19 +45,7 @@ const { currentPath, lang } = Astro.props;
           Services
         </p>
       </a>
-      <a
-        href={lang == "en" ? "/en/" + "blog" : "/blog"}
-        class="overflow-hidden"
-      >
-        <p
-          class={classNames(
-            currentPath === "/blog/" ? "font-black" : "font-thin",
-            "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
-          )}
-        >
-          {i("Blogue", "fr")}
-        </p>
-      </a>
+   
       <a
         href={lang == "en" ? "/en/" + "aboutUs" : "/aboutUs"}
         class="overflow-hidden"
@@ -69,6 +57,19 @@ const { currentPath, lang } = Astro.props;
           )}
         >
           {i("équipe", lang)}
+        </p>
+      </a>
+         <a
+        href={lang == "en" ? "/en/" + "blog" : "/blog"}
+        class="overflow-hidden"
+      >
+        <p
+          class={classNames(
+            currentPath === "/blog/" ? "font-black" : "font-thin",
+            "cursor-pointer m-auto w-fit hover:text-white menuOption uppercase -translate-y-[50px] "
+          )}
+        >
+          {i("Blogue", "fr")}
         </p>
       </a>
       <a
@@ -181,16 +182,7 @@ const { currentPath, lang } = Astro.props;
           {i("services", lang)}
         </p>
       </a>
-      <a href={lang == "en" ? "/en/" + "blog" : "/blog"}>
-        <p
-          class={classNames(
-            currentPath === "/blog/" ? "font-bold " : "",
-            "cursor-pointer hover:text-white uppercase h6"
-          )}
-        >
-          {i("Blogue", lang)}
-        </p>
-      </a>
+
       <a href={lang == "en" ? "/en/" + "aboutUs" : "/aboutUs"}>
         <p
           class={classNames(
@@ -199,6 +191,16 @@ const { currentPath, lang } = Astro.props;
           )}
         >
           {i("équipe", lang)}
+        </p>
+      </a>
+            <a href={lang == "en" ? "/en/" + "blog" : "/blog"}>
+        <p
+          class={classNames(
+            currentPath === "/blog/" ? "font-bold " : "",
+            "cursor-pointer hover:text-white uppercase h6"
+          )}
+        >
+          {i("Blogue", lang)}
         </p>
       </a>
       <a href={lang == "en" ? "/en/" + "contact" : "/contact"}>

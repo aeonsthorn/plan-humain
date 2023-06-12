@@ -5,7 +5,7 @@ import Layout from "./Layout.astro";
 <!-- TODO add the md's stuff -->
 <Layout lang="fr" path="/" title="" description="">
   <style is:global>
-    main {
+    main.single-blog {
       text-color: #fdf7e3 !important;
       max-width: 1300px !important;
       margin: auto !important;
@@ -15,8 +15,12 @@ import Layout from "./Layout.astro";
       margin-bottom: 100px !important;
     }
 
+    .single-blog .svg-btn p {
+      padding: 0px !important;
+    }
+
     @media (min-width: 640px) {
-      main {
+      main.single-blog {
         padding-left: 3rem !important;
         padding-right: 3rem !important;
         padding-top: 2.5rem !important;
@@ -24,59 +28,60 @@ import Layout from "./Layout.astro";
     }
 
     @media (min-width: 768px) {
-      main {
+      main.single-blog {
         padding-top: 2.5rem !important;
       }
     }
 
-    h1 {
+    .single-blog h1 {
       padding-top: 0 !important;
       padding-bottom: 2.5rem !important;
     }
 
     @media (min-width: 640px) {
-      h1 {
+      .single-blog h1 {
         padding-top: 2.5rem !important;
         padding-bottom: 2.5rem !important;
       }
     }
 
-    p {
+    .single-blog p {
       padding-bottom: 12px !important;
       padding-top: 12px !important;
     }
 
     @media (min-width: 640px) {
-      p {
+      .single-blog p {
         padding-bottom: 20px !important;
         padding-top: 20px !important;
       }
     }
 
-    main img {
+    main.single-blog img {
       width: 100% !important;
+      object-fit: cover !important;
     }
 
     @media (min-width: 640px) {
-      main img {
+      main.single-blog img {
         height: 350px !important;
       }
     }
 
     @media (min-width: 768px) {
-      main img {
+      main.single-blog img {
         height: 450px !important;
       }
     }
 
     @media (min-width: 1024px) {
-      main img {
+      main.single-blog img {
         height: 650px !important;
       }
     }
   </style>
 
-  <main>
+  <main class="single-blog">
     <slot />
   </main>
 </Layout>

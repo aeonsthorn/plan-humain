@@ -254,6 +254,14 @@ const translations = {
     en: "network",
   },
 
+  // blogue
+
+  "La RSE, la responsabilité sociale des entreprises, vous connaissez? C’est l’un des principaux champs d’intervention de Plan humain. Encore relativement méconnue, notre mission est aussi de vous faire découvrir en quoi elle consiste et quelles peuvent être les retombées positives pour les entreprises qui se dotent d’un plan RSE. Expliquer la RSE en langage clair, c’est notre défi au quotidien!":
+    {
+      fr: "La RSE, la responsabilité sociale des entreprises, vous connaissez? C’est l’un des principaux champs d’intervention de Plan humain. Encore relativement méconnue, notre mission est aussi de vous faire découvrir en quoi elle consiste et quelles peuvent être les retombées positives pour les entreprises qui se dotent d’un plan RSE. Expliquer la RSE en langage clair, c’est notre défi au quotidien!",
+      en: "CSR, or corporate social responsibility, is one of Plan Humain’s main areas of expertise. Still relatively unknown, our mission is to help you understand what CSR is and how it can benefit your business. Explaining CSR in plain language is our daily challenge!",
+    },
+
   //Merci
   //Meta
   "Bien reçu, merci.": { fr: "Bien reçu, merci.", en: "Got it! Thanks." },
