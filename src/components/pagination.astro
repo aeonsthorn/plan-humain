@@ -1,0 +1,118 @@
+---
+const { prevUrl, nextUrl } = Astro.props;
+---
+
+<nav class="flex justify-between h-16">
+  {
+    prevUrl && (
+      <a href={prevUrl}>
+        <svg
+          width="64px"
+          height="64px"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#000000"
+        >
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <>
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <title />{" "}
+              <g id="Complete">
+                {" "}
+                <g id="arrow-left">
+                  {" "}
+                  <g>
+                    {" "}
+                    <polyline
+                      data-name="Right"
+                      fill="none"
+                      id="Right-2"
+                      points="7.6 7 2.5 12 7.6 17"
+                      stroke="#e3ddbd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />{" "}
+                    <line
+                      fill="none"
+                      stroke="#e3ddbd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      x1="21.5"
+                      x2="4.8"
+                      y1="12"
+                      y2="12"
+                    />{" "}
+                  </g>{" "}
+                </g>{" "}
+              </g>{" "}
+            </g>
+          </>
+        </svg>
+      </a>
+    )
+  }
+  {
+    nextUrl && (
+      <a href={nextUrl}>
+        <svg
+          width="64px"
+          height="64px"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#000000"
+        >
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <>
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <title />{" "}
+              <g id="Complete">
+                {" "}
+                <g id="arrow-right">
+                  {" "}
+                  <g>
+                    {" "}
+                    <polyline
+                      data-name="Right"
+                      fill="none"
+                      id="Right-2"
+                      points="16.4 7 21.5 12 16.4 17"
+                      stroke="#e3ddbd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />{" "}
+                    <line
+                      fill="none"
+                      stroke="#e3ddbd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      x1="2.5"
+                      x2="19.2"
+                      y1="12"
+                      y2="12"
+                    />{" "}
+                  </g>{" "}
+                </g>{" "}
+              </g>{" "}
+            </g>
+          </>
+        </svg>
+      </a>
+    )
+  }
+</nav>

@@ -1,0 +1,70 @@
+---
+import i from "../../../../utils/i18";
+import BlogPreviewTemplate from "../../../components/blogPreviewTemplate.astro";
+import Layout from "../../../layouts/Layout.astro";
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob(`../../../pages/blog/**/*.md`);
+  return paginate(allPosts, { pageSize: 2 });
+}
+const lang = "en";
+const path = "/blog";
+const { page } = Astro.props;
+---
+
+<Layout lang={lang} path={path} title="" description="">
+  <main
+    class="text-custom-beige-100 max-w-[1300px] m-auto px-4 sm:px-12 pt-0 sm:pt-10"
+  >
+    <div>
+      <div class="relative w-full shadow-md">
+        <div
+          class="absolute bg-gradient-to-l from-black to-transparent w-full h-full z-40 opacity-40"
+        >
+        </div>
+        <div class="h-[240px] sm:h-[350px] md:h-[450px] lg:h-[650px]">
+          <picture>
+            <img
+              src="/Galerie_Plan_Humain_117.jpg"
+              class="z-0 h-full object-cover"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div
+          class="absolute top-[50%] -translate-y-[50%] right-[1.6%] sm:right-[8%] z-50 w-fit text-right"
+        >
+          <h1>
+            {i("Blogue", lang)}<br />
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 sm:px-12 md:px-20 py-10 sm:py-16">
+      <p class="leading-relaxed">
+        {
+          i(
+            "La RSE, la responsabilité sociale des entreprises, vous connaissez? C’est l’un des principaux champs d’intervention de Plan humain. Encore relativement méconnue, notre mission est aussi de vous faire découvrir en quoi elle consiste et quelles peuvent être les retombées positives pour les entreprises qui se dotent d’un plan RSE. Expliquer la RSE en langage clair, c’est notre défi au quotidien!",
+            lang
+          )
+        }
+      </p>
+    </div>
+    <!-- {
+      allPosts
+        .filter((post) => post.frontmatter.lang === lang)
+        .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
+        .map((post) => (
+          <BlogPreviewTemplate
+            lang={lang}
+            title={post.frontmatter.title}
+            date={post.frontmatter.pubDate}
+            url={post.url}
+            author={post.frontmatter.author}
+            image={post.frontmatter.image.src}
+            description={post.frontmatter.description}
+            externalLink={post.frontmatter.externalLink}
+          />
+        ))
+    } -->
+  </main>
+</Layout>
