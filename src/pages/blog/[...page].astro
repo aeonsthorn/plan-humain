@@ -52,23 +52,25 @@ console.log(page);
         }
       </p>
     </div>
-    {
-      page.data
-        .filter((post) => post.frontmatter.lang === lang)
-        .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
-        .map((post) => (
-          <BlogPreviewTemplate
-            lang={lang}
-            title={post.frontmatter.title}
-            date={post.frontmatter.pubDate}
-            url={post.url}
-            author={post.frontmatter.author}
-            image={post.frontmatter.image.src}
-            description={post.frontmatter.description}
-            externalLink={post.frontmatter.externalLink}
-          />
-        ))
-    }
+    <div id="blog">
+      {
+        page.data
+          .filter((post) => post.frontmatter.lang === lang)
+          .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
+          .map((post) => (
+            <BlogPreviewTemplate
+              lang={lang}
+              title={post.frontmatter.title}
+              date={post.frontmatter.pubDate}
+              url={post.url}
+              author={post.frontmatter.author}
+              image={post.frontmatter.image.src}
+              description={post.frontmatter.description}
+              externalLink={post.frontmatter.externalLink}
+            />
+          ))
+      }
+    </div>
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </main>
 </Layout>
