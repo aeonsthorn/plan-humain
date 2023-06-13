@@ -1,14 +1,14 @@
 ---
 const { prevUrl, nextUrl, current, length } = Astro.props;
 const numbersArray = Array.from({ length }, (_, index) => index + 1);
-console.log(numbersArray);
+console.log(current);
 ---
 
 <nav class="flex py-4">
-  <div class="w-1/3">
+  <div class="w-1/3 flex">
     {
       prevUrl && (
-        <a class="flex" href={prevUrl + "#blog"}>
+        <a href={prevUrl + "#blog"}>
           <svg
             version="1.1"
             id="Layer_1"
@@ -51,7 +51,14 @@ console.log(numbersArray);
     {
       numbersArray.map((num) => (
         <div class="flex items-center align-middle">
-          <a class={num === 1} href={`/blog${num == 1 ? "" : "/" + num}`}>
+          <a
+            class={
+              current === num
+                ? "text-center text-3xl text-white"
+                : "text-center text-3xl hover:text-white"
+            }
+            href={`/blog${num == 1 ? "" : "/" + num}#blog`}
+          >
             {num}
           </a>
         </div>
@@ -59,10 +66,10 @@ console.log(numbersArray);
     }
   </div>
 
-  <div class="w-1/3">
+  <div class="w-1/3 flex">
     {
       nextUrl && (
-        <a class="flex" href={nextUrl + "#blog"}>
+        <a href={nextUrl + "#blog"}>
           <svg
             version="1.1"
             id="Layer_1"
