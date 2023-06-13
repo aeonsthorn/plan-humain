@@ -71,6 +71,11 @@ console.log(page);
           ))
       }
     </div>
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    <Pagination
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      current={page.current}
+      length={page.lastPage}
+    />
   </main>
 </Layout>
