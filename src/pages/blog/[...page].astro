@@ -1,10 +1,17 @@
 ---
-import i from "../../utils/i18";
-import BlogPreviewTemplate from "./blogPreviewTemplate.astro";
-import Layout from "../layouts/Layout.astro";
-const allPosts = await Astro.glob(`../pages/blog/**/*.md`);
+import i from "../../../utils/i18";
+import BlogPreviewTemplate from "../../components/blogPreviewTemplate.astro";
+import Layout from "../../layouts/Layout.astro";
+import Pagination from "../../components/pagination.astro";
 
-const { lang, path } = Astro.props;
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob(`../../pages/blog/**/*.md`);
+  return paginate(allPosts, { pageSize: 1 });
+}
+const lang = "fr";
+const path = "/blog";
+const { page } = Astro.props;
+console.log(page);
 ---
 
 <Layout lang={lang} path={path} title="" description="">
@@ -45,22 +52,30 @@ const { lang, path } = Astro.props;
         }
       </p>
     </div>
-    {
-      allPosts
-        .filter((post) => post.frontmatter.lang === lang)
-        .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
-        .map((post) => (
-          <BlogPreviewTemplate
-            lang={lang}
-            title={post.frontmatter.title}
-            date={post.frontmatter.pubDate}
-            url={post.url}
-            author={post.frontmatter.author}
-            image={post.frontmatter.image.src}
-            description={post.frontmatter.description}
-            externalLink={post.frontmatter.externalLink}
-          />
-        ))
-    }
+    <div id="blog">
+      {
+        page.data
+          .filter((post) => post.frontmatter.lang === lang)
+          .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
+          .map((post) => (
+            <BlogPreviewTemplate
+              lang={lang}
+              title={post.frontmatter.title}
+              date={post.frontmatter.pubDate}
+              url={post.url}
+              author={post.frontmatter.author}
+              image={post.frontmatter.image.src}
+              description={post.frontmatter.description}
+              externalLink={post.frontmatter.externalLink}
+            />
+          ))
+      }
+    </div>
+    <Pagination
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      current={page.currentPage}
+      length={page.lastPage}
+    />
   </main>
 </Layout>
