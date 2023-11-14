@@ -352,6 +352,16 @@ const translations = {
     fr: "https://h-co.ca/fr",
     en: "https://h-co.ca/en",
   },
+
+  consentCheckboxText: {
+    fr: "J'ai lu et j'accepte les conditions générales du site web, et je consens à recevoir des communications écrites de la part de Plan Humain",
+    en: "I have read and accept the website's terms and conditions, and I consent to receiving written communications from Plan Humain",
+  },
+
+  privacyOfficer: {
+    fr: "Délégué responsable à la vie privée: Fannie Perron",
+    en: "Privacy Officer: Fannie Perron",
+  },
 };
 
 export default function i(

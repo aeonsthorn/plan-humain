@@ -75,10 +75,13 @@ const { lang, title, description } = Astro.props;
         >
         {i("ou", lang)}
         <a href="tel:514-742-8463"
-          >au <br class="block sm:hidden" />
+          ><br class="block sm:hidden" />
           <span class="hover:text-white duration-250">514-742-8463.</span>
         </a>
       </p>
+
+      <p>{i("privacyOfficer", lang)}</p>
+
       <div
         class="grid md:grid-cols-2 gap-x-24 lg:gap-x-32 gap-y-10 mt-6 sm:mt-10"
       >
@@ -142,6 +145,19 @@ const { lang, title, description } = Astro.props;
           <div class="bg-custom-beige-100/50 h-[2px]"></div>
         </div>
       </div>
+      <div class="flex items-center mt-8">
+        <input
+          class="w-6 mr-4"
+          type="checkbox"
+          id="terms"
+          name="terms"
+          required=""
+          checked=""
+        /><label for="terms" class="text-sm houston-font text-dark-blue"
+          >{i("consentCheckboxText", lang)}</label
+        >
+      </div>
+
       <div id="submitForm" class="flex justify-center pt-10 w-full">
         <Button text={i("Envoyer", lang)} />
       </div>

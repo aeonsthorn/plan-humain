@@ -37,4 +37,49 @@ const { title, description, headerImgSrc } = Astro.props;
 <meta property="og:image" content="/fb-logo.png" />
 
 <script defer src="/js/gsap.js"></script>
-<script async src="/js/analytics.js"></script>
+
+<style is:global id="omc-styles">
+  #_omc .omc-cookies-section h2 {
+    display: flex;
+  }
+
+  #_omc h2 .omc-collapsible-arrow {
+    width: 2.5%;
+    margin-top: 2%;
+  }
+
+  #_omc .omc-dialog-header h1 {
+    text-align: center;
+  }
+
+  .omc-dialog-header > div {
+    display: none !important;
+  }
+
+  [class^="omc"] {
+    width: initial;
+  }
+
+  #_omc .switch-button[aria-checked="true"] .slider {
+    transform: translateX(17.5px) !important;
+  }
+
+  #_omc .omc-privacy-icon {
+    width: 56px !important;
+  }
+
+  @media (max-width: 600px) {
+    #_omc .switch-button[aria-checked="true"] .slider {
+      transform: translateX(15px) !important;
+    }
+
+    #_omc .omc-dialog-footer .a {
+      width: auto !important;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script defer src="https://ohmycookies-api.0vxq7h.easypanel.host/builder/14.js"
+></script>

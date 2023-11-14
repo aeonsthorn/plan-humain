@@ -1,5 +1,6 @@
 # build output
 dist/
+public_html/
 
 # dependencies
 node_modules/
