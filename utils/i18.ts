@@ -352,6 +352,29 @@ const translations = {
     fr: "https://h-co.ca/fr",
     en: "https://h-co.ca/en",
   },
+  "NOTRE ÉQUIPE": {
+    fr: "NOTRE ÉQUIPE",
+    en: "OUR TEAM",
+  },
+  "Conseillère, Stratégie et Contenu": {
+    fr: "Conseillère, Stratégie et Contenu",
+    en: "Advisor, Strategy and Content",
+  },
+  "Créative et engagée, Garance Philippe incarne la fusion de la passion et de l’expertise. Elle apporte à Plan humain une créativité unique, teintée par son parcours en études théâtrales et sa quête perpétuelle de comprendre l’esprit humain à travers ses études en psychologie. Certifiée en programmation neuro-linguistique, Garance incarne la rigueur et la créativité, deux facettes essentielles dans la création de stratégies impactantes. Son engagement social, qu’elle manifeste à travers des initiatives telles que la Fondation Mira et l’Opération Père Noël souligne son désir profond de contribuer au bien-être collectif.":
+    {
+      fr: "Créative et engagée, Garance Philippe incarne la fusion de la passion et de l’expertise. Elle apporte à Plan humain une créativité unique, teintée par son parcours en études théâtrales et sa quête perpétuelle de comprendre l’esprit humain à travers ses études en psychologie. Certifiée en programmation neuro-linguistique, Garance incarne la rigueur et la créativité, deux facettes essentielles dans la création de stratégies impactantes. Son engagement social, qu’elle manifeste à travers des initiatives telles que la Fondation Mira et l’Opération Père Noël souligne son désir profond de contribuer au bien-être collectif.",
+      en: "Creative and committed, Garance Philippe embodies the fusion of passion and expertise. She brings a unique creativity to Plan Humain, tinted by her background in theatre studies and her perpetual quest to understand the human mind through her studies in psychology. Certified in neuro-linguistic programming, Garance embodies rigor and creativity, two essential facets in the creation of impactful strategies. Her social commitment, which she manifests through initiatives such as the Mira Foundation and Operation Santa Claus, underlines her deep desire to contribute to collective well-being.",
+    },
+
+  "Fondation Mira": {
+    fr: "Fondation Mira",
+    en: "Fondation Mira",
+  },
+
+  "Opération Père Noël": {
+    fr: "Opération Père Noël",
+    en: "Opération Père Noël",
+  },
 
   consentCheckboxText: {
     fr: "J'ai lu et j'accepte les conditions générales du site web, et je consens à recevoir des communications écrites de la part de Plan Humain",
